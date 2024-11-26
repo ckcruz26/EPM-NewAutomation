@@ -1,18 +1,8 @@
 *** Settings ***
 Library        SeleniumLibrary
-
-*** Variables ***
-${baseURL}             https://172.31.32.64/registration_pilot/mainRegister.php
-${browserName}        Chrome
-${personnelUN}        12456
-${personnelPW}        P@ssw0rd
-
-${UploadFiletest}           css=[type='file']
-${AddFile}            C:/Users/ckcruz/Downloads/03-12456.png
-
+Resource    ../../resources/EPM_Resource.robot
 
 *** Test Cases ***
-
 EPM_REGISTER_001
     [Tags]   EPM_REGISTER_001
     TRY
@@ -184,12 +174,7 @@ EPM_REGISTER_010
 
 
 *** Keywords ***
-Open WebApp using Chrome
-    Open Browser    ${baseURL}    ${browserName}    options=add_argument("--ignore-certificate-errors")
-    Maximize Browser Window
-Input EmpNo to Validate
-    [Arguments]    ${username} 
-    Input Text    xpath=//*[@id="txtSearch"]    ${username}
+
 Click Search Employee
     Click Button    xpath=//*[@id="btn_search"]
 RegFormAllRequired
@@ -265,13 +250,7 @@ IncompleteFillUp_3
     Click Register Button
 
 
-Upload File
-    Wait Until Page Contains Element   ${UploadFiletest}   4s
-    Scroll Element Into View     ${UploadFiletest}
-    Choose File     ${UploadFiletest}     ${AddFile}
 
-Click Register Button
-    Click Button    xpath=//*[@id="btnSubmit"]
    
     
    
