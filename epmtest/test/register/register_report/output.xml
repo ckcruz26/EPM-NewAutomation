@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-27T09:36:58.136488" rpa="false" schemaversion="5">
+<suite id="s1" name="EPMRegister" source="C:\Users\ckcruz\Desktop\EPM Matters\Test Environment\epmtest\test\register\EPMRegister.robot">
+<test id="s1-t1" name="EPM_REGISTER_001" line="6">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:36:58.551571" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:36:58.551571" elapsed="4.537639"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.090203" elapsed="0.050508"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:36:58.551571" elapsed="4.589603"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:03.143176" level="INFO">Typing text '10002' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.142171" elapsed="0.187776"/>
+</kw>
+<arg>10002</arg>
+<status status="PASS" start="2024-11-27T09:37:03.141551" elapsed="0.188396"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:03.330946" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.330946" elapsed="0.402868"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:03.330946" elapsed="0.402868"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.733814" elapsed="0.057140"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:03.832254" level="INFO">${msg} = Employee Number found. Ready to proceed with registration?</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.790954" elapsed="0.041300"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Employee Number found. Ready to proceed with registration?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.832254" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:03.833317" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonYes"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonYes"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:03.833317" elapsed="0.230448"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:36:58.550531" elapsed="5.513234"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:37:04.064766" elapsed="0.000423"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:37:04.064766" elapsed="0.000423"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:37:06.066558" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:37:04.065189" elapsed="2.002040"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:37:06.067229" elapsed="2.293722"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:04.065189" elapsed="4.295762"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:36:58.550531" elapsed="9.810420"/>
+</try>
+<tag>EPM_REGISTER_001</tag>
+<status status="PASS" start="2024-11-27T09:36:58.550531" elapsed="9.811486"/>
+</test>
+<test id="s1-t2" name="EPM_REGISTER_002" line="23">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:08.366251" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:37:08.366251" elapsed="5.277360"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:37:13.644606" elapsed="0.047181"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:08.365204" elapsed="5.326583"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:13.695841" level="INFO">Typing text '10002' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:13.694781" elapsed="0.269500"/>
+</kw>
+<arg>10002</arg>
+<status status="PASS" start="2024-11-27T09:37:13.692785" elapsed="0.271496"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:13.965322" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:13.965322" elapsed="0.472752"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:13.965322" elapsed="0.473751"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:37:14.439073" elapsed="0.044994"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:14.512961" level="INFO">${msg} = Employee Number found. Ready to proceed with registration?</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:14.484067" elapsed="0.028894"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Employee Number found. Ready to proceed with registration?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:37:14.512961" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:14.512961" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonNo"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonNo"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:14.512961" elapsed="0.143145"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:08.365204" elapsed="6.290902"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:37:14.657456" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:37:14.656106" elapsed="0.001350"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:37:16.659375" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:37:14.658502" elapsed="2.000873"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:37:16.660371" elapsed="2.311410"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:14.657456" elapsed="4.314325"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:37:08.365204" elapsed="10.606577"/>
+</try>
+<tag>EPM_REGISTER_002</tag>
+<status status="PASS" start="2024-11-27T09:37:08.363675" elapsed="10.609409"/>
+</test>
+<test id="s1-t3" name="EPM_REGISTER_003" line="40">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:18.977115" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:37:18.977115" elapsed="4.321197"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:37:23.298312" elapsed="0.052396"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:18.976114" elapsed="4.374594"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:23.354774" level="INFO">Typing text '1000267' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:23.353478" elapsed="0.193923"/>
+</kw>
+<arg>1000267</arg>
+<status status="PASS" start="2024-11-27T09:37:23.352152" elapsed="0.195249"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:23.548398" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:23.548398" elapsed="0.461184"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:23.547401" elapsed="0.462181"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="CheckIDmessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:37:24.009582" elapsed="0.038301"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:24.085093" level="INFO">${msg} = Opps! Invalid Employee number</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="CheckIDmessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:24.048880" elapsed="0.036213"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Opps! Invalid Employee number</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:37:24.085093" elapsed="0.001126"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:18.976114" elapsed="5.110105"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:37:24.086590" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:37:24.086590" elapsed="0.000627"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:37:26.087928" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:37:24.087217" elapsed="2.000711"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:37:26.087928" elapsed="2.326961"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:24.087217" elapsed="4.327672"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:37:18.976114" elapsed="9.438775"/>
+</try>
+<tag>EPM_REGISTER_003</tag>
+<status status="PASS" start="2024-11-27T09:37:18.975079" elapsed="9.441088"/>
+</test>
+<test id="s1-t4" name="EPM_REGISTER_004" line="56">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:28.421358" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:37:28.421358" elapsed="4.252801"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:37:32.674675" elapsed="0.048925"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:28.420311" elapsed="4.303289"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:32.724347" level="INFO">Typing text '100' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:32.724347" elapsed="0.222676"/>
+</kw>
+<arg>100</arg>
+<status status="PASS" start="2024-11-27T09:37:32.723600" elapsed="0.223831"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:32.949021" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:32.948020" elapsed="0.443318"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:32.948020" elapsed="0.443318"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="CheckIDmessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:37:33.391338" elapsed="0.029849"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:33.453123" level="INFO">${msg} = Opps! Invalid Employee number</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="CheckIDmessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:33.422214" elapsed="0.030909"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Opps! Invalid Employee number</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:37:33.453123" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:28.420311" elapsed="5.032812"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:37:33.454105" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:37:33.454105" elapsed="0.000000"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:37:35.455049" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:37:33.454105" elapsed="2.000944"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:37:35.455049" elapsed="2.320695"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:33.454105" elapsed="4.321639"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:37:28.420311" elapsed="9.355433"/>
+</try>
+<tag>EPM_REGISTER_004</tag>
+<status status="PASS" start="2024-11-27T09:37:28.419316" elapsed="9.357429"/>
+</test>
+<test id="s1-t5" name="EPM_REGISTER_005" line="71">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:37.779783" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:37:37.779783" elapsed="4.342953"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:37:42.123293" elapsed="0.041105"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:37.778775" elapsed="4.385623"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:42.165429" level="INFO">Typing text '6666' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:42.165429" elapsed="0.178786"/>
+</kw>
+<arg>6666</arg>
+<status status="PASS" start="2024-11-27T09:37:42.165429" elapsed="0.178786"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:42.344215" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:42.344215" elapsed="0.393749"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:42.344215" elapsed="0.393749"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:37:42.738588" elapsed="0.286206"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:43.072669" level="INFO">${msg} = Oops! Invalid Credentials. Please contact Personnel Section.</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:43.025792" elapsed="0.046877"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Oops! Invalid Credentials. Please contact Personnel Section.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:37:43.072669" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:37.778775" elapsed="5.293894"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:37:43.072669" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:37:43.072669" elapsed="0.000000"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:37:45.073713" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:37:43.072669" elapsed="2.001044"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:37:45.073713" elapsed="2.326971"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:43.072669" elapsed="4.328015"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:37:37.778775" elapsed="9.621909"/>
+</try>
+<tag>EPM_REGISTER_005</tag>
+<status status="PASS" start="2024-11-27T09:37:37.777740" elapsed="9.624315"/>
+</test>
+<test id="s1-t6" name="EPM_REGISTER_006" line="87">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:47.406696" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:37:47.406696" elapsed="5.598555"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.005748" elapsed="0.044816"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:47.405653" elapsed="5.645904"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:53.052627" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.051557" elapsed="0.235495"/>
+</kw>
+<arg>12456</arg>
+<status status="PASS" start="2024-11-27T09:37:53.051557" elapsed="0.235495"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:53.289097" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.289097" elapsed="0.399037"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:53.288054" elapsed="0.400080"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.689046" elapsed="0.043852"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:53.765342" level="INFO">${msg} = This employee number is already registered in our system.</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.732898" elapsed="0.032444"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>This employee number is already registered in our system.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.766340" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:47.405653" elapsed="6.360687"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:37:53.766340" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:37:53.766340" elapsed="0.000000"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:37:55.767193" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:37:53.766340" elapsed="2.001248"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:37:55.767588" elapsed="2.389115"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:53.766340" elapsed="4.390363"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:37:47.405653" elapsed="10.751050"/>
+</try>
+<tag>EPM_REGISTER_006</tag>
+<status status="PASS" start="2024-11-27T09:37:47.404050" elapsed="10.753983"/>
+</test>
+<test id="s1-t7" name="EPM_REGISTER_008" line="121">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:37:58.161074" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:37:58.161074" elapsed="4.414770"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:38:02.576843" elapsed="0.049697"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:58.161074" elapsed="4.466460"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:02.631195" level="INFO">Typing text '10002' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:02.630191" elapsed="0.202121"/>
+</kw>
+<arg>10002</arg>
+<status status="PASS" start="2024-11-27T09:38:02.627534" elapsed="0.205776"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:02.833310" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:02.833310" elapsed="0.467277"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:02.833310" elapsed="0.467277"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:38:03.300587" elapsed="0.267212"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:03.606666" level="INFO">${msg} = Employee Number found. Ready to proceed with registration?</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:03.567799" elapsed="0.038867"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Employee Number found. Ready to proceed with registration?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:38:03.606666" elapsed="0.001220"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:03.607886" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonYes"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonYes"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:03.607886" elapsed="0.204439"/>
+</kw>
+<kw name="IncompleteFillUp_1">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:03.814848" level="INFO">Typing password into text field 'xpath=//input[@id='DesiredPassword']'.</msg>
+<msg time="2024-11-27T09:38:03.910564" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@id='DesiredPassword']</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:03.813852" elapsed="0.236052"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.052089" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
+<msg time="2024-11-27T09:38:04.145988" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//*[@id="ConfirmPassword"]</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.049904" elapsed="0.172109"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.237511" level="INFO">Current page contains element 'xpath=//*[@id="AddSex"]'.</msg>
+<arg>xpath=//*[@id="AddSex"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.222518" elapsed="0.014993"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.238996" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddSex"]' by value 0.</msg>
+<arg>xpath=//*[@id="AddSex"]</arg>
+<arg>0</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.238996" elapsed="0.134322"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.374360" level="INFO">Typing text '23/08/2000' into text field 'xpath=//*[@id="AddBirthdate"]'.</msg>
+<arg>xpath=//*[@id="AddBirthdate"]</arg>
+<arg>23/08/2000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.373318" elapsed="0.164458"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.539536" level="INFO">Typing text '' into text field 'xpath=//*[@id="AddEmail"]'.</msg>
+<arg>xpath=//*[@id="AddEmail"]</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.537776" elapsed="0.116667"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.654443" level="INFO">Typing text '' into text field 'xpath=//*[@id="AddMobileNumber"]'.</msg>
+<arg>xpath=//*[@id="AddMobileNumber"]</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.654443" elapsed="0.090008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.745448" level="INFO">Typing text '' into text field 'xpath=//*[@id="AddHouseNumber"]'.</msg>
+<arg>xpath=//*[@id="AddHouseNumber"]</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.744451" elapsed="0.108864"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.854127" level="INFO">Typing text '' into text field 'xpath=//*[@id="AddStreet"]'.</msg>
+<arg>xpath=//*[@id="AddStreet"]</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.854127" elapsed="0.117398"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.985535" level="INFO">Current page contains element 'xpath=//*[@id="AddRegion"]'.</msg>
+<arg>xpath=//*[@id="AddRegion"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.971525" elapsed="0.014010"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:04.986564" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddRegion"]' by label NCR [National Capital Region].</msg>
+<arg>xpath=//*[@id="AddRegion"]</arg>
+<arg>NCR [National Capital Region]</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:04.986564" elapsed="0.110144"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.115757" level="INFO">Current page contains element 'xpath=//*[@id="AddProvince"]'.</msg>
+<arg>xpath=//*[@id="AddProvince"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.097738" elapsed="0.019016"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.116754" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddProvince"]' by label NCR FIRST DISTRICT.</msg>
+<arg>xpath=//*[@id="AddProvince"]</arg>
+<arg>NCR FIRST DISTRICT</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.116754" elapsed="0.140242"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.285718" level="INFO">Current page contains element 'xpath=//*[@id="AddCity"]'.</msg>
+<arg>xpath=//*[@id="AddCity"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.256996" elapsed="0.028722"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.286143" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddCity"]' by label BINONDO.</msg>
+<arg>xpath=//*[@id="AddCity"]</arg>
+<arg>BINONDO</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.286143" elapsed="0.126289"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.434672" level="INFO">Current page contains element 'xpath=//*[@id="AddBarangay"]'.</msg>
+<arg>xpath=//*[@id="AddBarangay"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.412432" elapsed="0.022240"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.434672" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddBarangay"]' by label BARANGAY 287.</msg>
+<arg>xpath=//*[@id="AddBarangay"]</arg>
+<arg>BARANGAY 287</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.434672" elapsed="0.129123"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.564797" level="INFO">Clicking element 'xpath=//*[@id="dataConsent"]'.</msg>
+<arg>xpath=//*[@id="dataConsent"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.563795" elapsed="0.143819"/>
+</kw>
+<kw name="Click Register Button" owner="EPM_Resource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:05.709317" level="INFO">Clicking button 'xpath=//*[@id="btnSubmit"]'.</msg>
+<arg>xpath=//*[@id="btnSubmit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.709317" elapsed="0.141305"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:05.708660" elapsed="0.141962"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:03.813322" elapsed="2.037300"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:37:58.161074" elapsed="7.690545"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:38:05.851720" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:38:05.851720" elapsed="0.000000"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:38:07.852938" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:38:05.851720" elapsed="2.001218"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:38:07.852938" elapsed="4.132260"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:05.851720" elapsed="6.133478"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:37:58.161074" elapsed="13.824124"/>
+</try>
+<tag>EPM_REGISTER_008</tag>
+<status status="PASS" start="2024-11-27T09:37:58.160027" elapsed="13.826372"/>
+</test>
+<test id="s1-t8" name="EPM_REGISTER_009" line="139">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:11.990438" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:38:11.990438" elapsed="4.649092"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:38:16.640527" elapsed="0.094298"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:11.989399" elapsed="4.746421"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:16.738815" level="INFO">Typing text '10002' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:16.737815" elapsed="0.240087"/>
+</kw>
+<arg>10002</arg>
+<status status="PASS" start="2024-11-27T09:38:16.735820" elapsed="0.242082"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:16.978718" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:16.978718" elapsed="0.452034"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:16.978718" elapsed="0.452034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:38:17.430752" elapsed="0.287972"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:17.763264" level="INFO">${msg} = Employee Number found. Ready to proceed with registration?</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:17.718724" elapsed="0.044540"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Employee Number found. Ready to proceed with registration?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:38:17.763264" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:17.763264" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonYes"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonYes"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:17.763264" elapsed="0.250005"/>
+</kw>
+<kw name="IncompleteFillUp_2">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:18.015264" level="INFO">Typing password into text field 'xpath=//input[@id='DesiredPassword']'.</msg>
+<msg time="2024-11-27T09:38:18.116773" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@id='DesiredPassword']</arg>
+<arg>P@ssw0rd1.</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:18.015264" elapsed="0.314953"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:18.331216" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
+<msg time="2024-11-27T09:38:18.431968" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//*[@id="ConfirmPassword"]</arg>
+<arg>P@ssw0rd1.</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:18.331216" elapsed="0.221767"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:18.553723" level="INFO">Typing text 'dummyzxc@gmail.com' into text field 'xpath=//*[@id="AddEmail"]'.</msg>
+<arg>xpath=//*[@id="AddEmail"]</arg>
+<arg>dummyzxc@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:18.552983" elapsed="0.119902"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:18.673326" level="INFO">Typing text '09281005999' into text field 'xpath=//*[@id="AddMobileNumber"]'.</msg>
+<arg>xpath=//*[@id="AddMobileNumber"]</arg>
+<arg>09281005999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:18.672885" elapsed="0.111931"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:18.784968" level="INFO">Typing text '29' into text field 'xpath=//*[@id="AddHouseNumber"]'.</msg>
+<arg>xpath=//*[@id="AddHouseNumber"]</arg>
+<arg>29</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:18.784968" elapsed="0.166678"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:18.952676" level="INFO">Typing text '187' into text field 'xpath=//*[@id="AddStreet"]'.</msg>
+<arg>xpath=//*[@id="AddStreet"]</arg>
+<arg>187</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:18.952676" elapsed="0.178450"/>
+</kw>
+<kw name="Upload File" owner="EPM_Resource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${UploadFiletest}</arg>
+<arg>4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:19.131126" elapsed="0.015098"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${UploadFiletest}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-27T09:38:19.146224" elapsed="0.316512"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:19.462736" level="INFO">Sending C:\Users\ckcruz\Downloads\03-12456.png to browser.</msg>
+<arg>${UploadFiletest}</arg>
+<arg>${AddFile}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:19.462736" elapsed="0.070160"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:19.131126" elapsed="0.401770"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:19.533916" level="INFO">Clicking element 'xpath=//*[@id="dataConsent"]'.</msg>
+<arg>xpath=//*[@id="dataConsent"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:19.532896" elapsed="0.144341"/>
+</kw>
+<kw name="Click Register Button" owner="EPM_Resource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:19.678698" level="INFO">Clicking button 'xpath=//*[@id="btnSubmit"]'.</msg>
+<arg>xpath=//*[@id="btnSubmit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:19.678236" elapsed="0.216790"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:19.677237" elapsed="0.217789"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:18.014268" elapsed="1.880758"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:11.989399" elapsed="7.905627"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:38:19.896063" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:38:19.895026" elapsed="0.001037"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:38:21.897362" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:38:19.896438" elapsed="2.001050"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:38:21.897488" elapsed="4.047224"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:19.896438" elapsed="6.049274"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:38:11.989399" elapsed="13.956313"/>
+</try>
+<tag>EPM_REGISTER_009</tag>
+<status status="PASS" start="2024-11-27T09:38:11.988092" elapsed="13.958338"/>
+</test>
+<test id="s1-t9" name="EPM_REGISTER_010" line="157">
+<try>
+<branch type="TRY">
+<kw name="Open WebApp using Chrome Registration" owner="EPM_Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:25.949671" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/mainRegister.php'.</msg>
+<arg>https://172.31.32.64/registration_pilot/mainRegister.php</arg>
+<arg>${browserName}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T09:38:25.949425" elapsed="4.926065"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T09:38:30.875490" elapsed="0.045357"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:25.948429" elapsed="4.973253"/>
+</kw>
+<kw name="Input EmpNo to Validate" owner="EPM_Resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:30.922682" level="INFO">Typing text '10002' into text field 'xpath=//*[@id="txtSearch"]'.</msg>
+<arg>xpath=//*[@id="txtSearch"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:30.922682" elapsed="0.245020"/>
+</kw>
+<arg>10002</arg>
+<status status="PASS" start="2024-11-27T09:38:30.921682" elapsed="0.246478"/>
+</kw>
+<kw name="Click Search Employee">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:31.170600" level="INFO">Clicking button 'xpath=//*[@id="btn_search"]'.</msg>
+<arg>xpath=//*[@id="btn_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:31.169205" elapsed="0.471446"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:31.168160" elapsed="0.473483"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-27T09:38:31.641643" elapsed="0.063501"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:31.753211" level="INFO">${msg} = Employee Number found. Ready to proceed with registration?</msg>
+<var>${msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:31.706141" elapsed="0.047070"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Employee Number found. Ready to proceed with registration?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-27T09:38:31.753211" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:31.753211" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonYes"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonYes"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:31.753211" elapsed="0.255550"/>
+</kw>
+<kw name="IncompleteFillUp_3">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.010825" level="INFO">Typing password into text field 'xpath=//input[@id='DesiredPassword']'.</msg>
+<msg time="2024-11-27T09:38:32.092805" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@id='DesiredPassword']</arg>
+<arg>P@ssw0rd1.</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.009825" elapsed="0.217294"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.227119" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
+<msg time="2024-11-27T09:38:32.279170" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//*[@id="ConfirmPassword"]</arg>
+<arg>P@ssw0rd1.</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.227119" elapsed="0.140093"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.385155" level="INFO">Current page contains element 'xpath=//*[@id="AddSex"]'.</msg>
+<arg>xpath=//*[@id="AddSex"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.367212" elapsed="0.017943"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.386152" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddSex"]' by value 0.</msg>
+<arg>xpath=//*[@id="AddSex"]</arg>
+<arg>0</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.385155" elapsed="0.089504"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.475656" level="INFO">Typing text '23/08/2000' into text field 'xpath=//*[@id="AddBirthdate"]'.</msg>
+<arg>xpath=//*[@id="AddBirthdate"]</arg>
+<arg>23/08/2000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.475656" elapsed="0.104859"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.581510" level="INFO">Typing text 'dummyzxc@gmail.com' into text field 'xpath=//*[@id="AddEmail"]'.</msg>
+<arg>xpath=//*[@id="AddEmail"]</arg>
+<arg>dummyzxc@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.580515" elapsed="0.112729"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.694274" level="INFO">Typing text '09281005999' into text field 'xpath=//*[@id="AddMobileNumber"]'.</msg>
+<arg>xpath=//*[@id="AddMobileNumber"]</arg>
+<arg>09281005999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.693244" elapsed="0.100499"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.793743" level="INFO">Typing text '29' into text field 'xpath=//*[@id="AddHouseNumber"]'.</msg>
+<arg>xpath=//*[@id="AddHouseNumber"]</arg>
+<arg>29</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.793743" elapsed="0.096896"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.904534" level="INFO">Current page contains element 'xpath=//*[@id="AddRegion"]'.</msg>
+<arg>xpath=//*[@id="AddRegion"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.890639" elapsed="0.013895"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:32.905533" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddRegion"]' by label NCR [National Capital Region].</msg>
+<arg>xpath=//*[@id="AddRegion"]</arg>
+<arg>NCR [National Capital Region]</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:32.905533" elapsed="0.115174"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:33.048906" level="INFO">Current page contains element 'xpath=//*[@id="AddProvince"]'.</msg>
+<arg>xpath=//*[@id="AddProvince"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.021709" elapsed="0.027197"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:33.048906" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddProvince"]' by label NCR FIRST DISTRICT.</msg>
+<arg>xpath=//*[@id="AddProvince"]</arg>
+<arg>NCR FIRST DISTRICT</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.048906" elapsed="0.133656"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:33.216355" level="INFO">Current page contains element 'xpath=//*[@id="AddCity"]'.</msg>
+<arg>xpath=//*[@id="AddCity"]</arg>
+<arg>2s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.182562" elapsed="0.033793"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:33.216355" level="INFO">Selecting options from selection list 'xpath=//*[@id="AddCity"]' by label BINONDO.</msg>
+<arg>xpath=//*[@id="AddCity"]</arg>
+<arg>BINONDO</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.216355" elapsed="0.114939"/>
+</kw>
+<kw name="Upload File" owner="EPM_Resource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${UploadFiletest}</arg>
+<arg>4s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.332292" elapsed="0.015191"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${UploadFiletest}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.347483" elapsed="0.282887"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:33.630370" level="INFO">Sending C:\Users\ckcruz\Downloads\03-12456.png to browser.</msg>
+<arg>${UploadFiletest}</arg>
+<arg>${AddFile}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.630370" elapsed="0.059079"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:33.331294" elapsed="0.358681"/>
+</kw>
+<kw name="Click Register Button" owner="EPM_Resource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T09:38:33.690975" level="INFO">Clicking button 'xpath=//*[@id="btnSubmit"]'.</msg>
+<arg>xpath=//*[@id="btnSubmit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.690975" elapsed="0.162458"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:33.689975" elapsed="0.163458"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:32.008761" elapsed="1.844672"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:25.948429" elapsed="7.905004"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Error</pattern>
+<kw name="Fatal Error" owner="BuiltIn">
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" start="2024-11-27T09:38:33.854463" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-27T09:38:33.853433" elapsed="0.001030"/>
+</branch>
+<branch type="FINALLY">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T09:38:35.855490" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T09:38:33.855010" elapsed="2.000480"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T09:38:35.856487" elapsed="2.405879"/>
+</kw>
+<status status="PASS" start="2024-11-27T09:38:33.854463" elapsed="4.407903"/>
+</branch>
+<status status="PASS" start="2024-11-27T09:38:25.948429" elapsed="12.313937"/>
+</try>
+<tag>EPM_REGISTER_010</tag>
+<status status="PASS" start="2024-11-27T09:38:25.947428" elapsed="12.316270"/>
+</test>
+<status status="PASS" start="2024-11-27T09:36:58.138482" elapsed="100.127258"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_001</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_002</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_003</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_004</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_005</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_006</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_008</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_009</stat>
+<stat pass="1" fail="0" skip="0">EPM_REGISTER_010</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="EPMRegister">EPMRegister</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

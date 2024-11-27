@@ -1,489 +1,489 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-26T07:53:34.579381" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-11-27T07:15:44.193568" rpa="false" schemaversion="5">
 <suite id="s1" name="ForgotPW" source="C:\Users\ckcruz\Desktop\EPM Matters\Test Environment\epmtest\test\forgotPW\ForgotPW.robot">
 <test id="s1-t1" name="[EPM_FORGOT_PW_001]" line="11">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:34.961574" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
+<msg time="2024-11-27T07:15:44.662509" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-26T07:53:34.961574" elapsed="5.460125"/>
+<status status="PASS" start="2024-11-27T07:15:44.662509" elapsed="4.293653"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-26T07:53:40.422545" elapsed="0.037968"/>
+<status status="PASS" start="2024-11-27T07:15:48.956162" elapsed="0.043868"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:34.961574" elapsed="5.498939"/>
+<status status="PASS" start="2024-11-27T07:15:44.661463" elapsed="4.338567"/>
 </kw>
 <kw name="InputValue">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:40.461438" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="empno"]'.</msg>
+<msg time="2024-11-27T07:15:49.003666" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="empno"]'.</msg>
 <arg>xpath=//*[@id="empno"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:40.461438" elapsed="0.230384"/>
+<status status="PASS" start="2024-11-27T07:15:49.001975" elapsed="0.242916"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:40.692818" level="INFO">Typing text 'cruzchristiankeirre7675@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2024-11-27T07:15:49.245764" level="INFO">Typing text 'cruzchristiankeirre7675@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>xpath=//*[@id="email"]</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:40.691822" elapsed="0.094746"/>
+<status status="PASS" start="2024-11-27T07:15:49.245764" elapsed="0.381496"/>
 </kw>
 <arg>12456</arg>
 <arg>cruzchristiankeirre7675@gmail.com</arg>
-<status status="PASS" start="2024-11-26T07:53:40.460513" elapsed="0.326055"/>
+<status status="PASS" start="2024-11-27T07:15:49.000972" elapsed="0.626288"/>
 </kw>
 <kw name="Click Submit Button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:40.786568" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
+<msg time="2024-11-27T07:15:49.628258" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
 <arg>xpath=/html/body/div[2]/div[2]/form/div[4]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:40.786568" elapsed="0.076796"/>
+<status status="PASS" start="2024-11-27T07:15:49.628258" elapsed="0.190303"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:40.786568" elapsed="0.076796"/>
+<status status="PASS" start="2024-11-27T07:15:49.627260" elapsed="0.192144"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="modalNotif"]/div/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-26T07:53:40.863364" elapsed="3.391303"/>
+<status status="PASS" start="2024-11-27T07:15:49.819404" elapsed="3.820696"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:44.282549" level="INFO">${success_text} = You will receive an email regarding your request within the next 24 hours. Please check your inbox and spam folder for further instructions.</msg>
+<msg time="2024-11-27T07:15:53.711439" level="INFO">${success_text} = You will receive an email regarding your request within the next 24 hours. Please check your inbox and spam folder for further instructions.</msg>
 <var>${success_text}</var>
 <arg>xpath=//*[@id="modalNotif-message"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:44.254667" elapsed="0.027882"/>
+<status status="PASS" start="2024-11-27T07:15:53.640100" elapsed="0.071339"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${success_text}</arg>
 <arg>You will receive an email regarding your request within the next 24 hours. Please check your inbox and spam folder for further instructions.</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-26T07:53:44.282549" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-27T07:15:53.712088" elapsed="0.000355"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:44.283542" level="INFO">Clicking button 'xpath=//*[@id="modalNotif"]/div/div/div[3]/button'.</msg>
+<msg time="2024-11-27T07:15:53.713681" level="INFO">Clicking button 'xpath=//*[@id="modalNotif"]/div/div/div[3]/button'.</msg>
 <arg>xpath=//*[@id="modalNotif"]/div/div/div[3]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:44.283542" elapsed="0.429134"/>
+<status status="PASS" start="2024-11-27T07:15:53.713567" elapsed="0.533876"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-26T07:53:49.712749" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-11-27T07:15:59.247548" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-26T07:53:44.712676" elapsed="5.000073"/>
+<status status="PASS" start="2024-11-27T07:15:54.247443" elapsed="5.000327"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:34.960542" elapsed="14.752207"/>
+<status status="PASS" start="2024-11-27T07:15:44.661463" elapsed="14.586307"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-11-26T07:53:49.712749" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:15:59.248767" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-26T07:53:49.712749" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:15:59.247770" elapsed="0.000997"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-26T07:53:49.712749" elapsed="3.986210"/>
+<status status="PASS" start="2024-11-27T07:15:59.248767" elapsed="4.107566"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:49.712749" elapsed="3.986210"/>
+<status status="PASS" start="2024-11-27T07:15:59.248767" elapsed="4.107566"/>
 </branch>
-<status status="PASS" start="2024-11-26T07:53:34.960542" elapsed="18.738417"/>
+<status status="PASS" start="2024-11-27T07:15:44.661463" elapsed="18.695865"/>
 </try>
 <tag>EPM_FORGOT_PW_001</tag>
-<status status="PASS" start="2024-11-26T07:53:34.960542" elapsed="18.739419"/>
+<status status="PASS" start="2024-11-27T07:15:44.660470" elapsed="18.697374"/>
 </test>
 <test id="s1-t2" name="[EPM_FORGOT_PW_002]" line="28">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:53.703952" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
+<msg time="2024-11-27T07:16:03.361832" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-26T07:53:53.703952" elapsed="5.263173"/>
+<status status="PASS" start="2024-11-27T07:16:03.361832" elapsed="4.459397"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-26T07:53:58.968130" elapsed="0.042515"/>
+<status status="PASS" start="2024-11-27T07:16:07.821229" elapsed="0.045781"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:53.703067" elapsed="5.307578"/>
+<status status="PASS" start="2024-11-27T07:16:03.361832" elapsed="4.505178"/>
 </kw>
 <kw name="InputValue">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:59.011643" level="INFO">Typing text '' into text field 'xpath=//*[@id="empno"]'.</msg>
+<msg time="2024-11-27T07:16:07.868006" level="INFO">Typing text '' into text field 'xpath=//*[@id="empno"]'.</msg>
 <arg>xpath=//*[@id="empno"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:59.011643" elapsed="0.179596"/>
+<status status="PASS" start="2024-11-27T07:16:07.868006" elapsed="0.210337"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:59.191239" level="INFO">Typing text 'cruzchristiankeirre7675@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2024-11-27T07:16:08.078343" level="INFO">Typing text 'cruzchristiankeirre7675@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>xpath=//*[@id="email"]</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:59.191239" elapsed="0.085773"/>
+<status status="PASS" start="2024-11-27T07:16:08.078343" elapsed="0.388495"/>
 </kw>
 <arg>${EMPTY}</arg>
 <arg>cruzchristiankeirre7675@gmail.com</arg>
-<status status="PASS" start="2024-11-26T07:53:59.011643" elapsed="0.265369"/>
+<status status="PASS" start="2024-11-27T07:16:07.867010" elapsed="0.599828"/>
 </kw>
 <kw name="Click Submit Button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:53:59.278008" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
+<msg time="2024-11-27T07:16:08.468214" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
 <arg>xpath=/html/body/div[2]/div[2]/form/div[4]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:53:59.277012" elapsed="0.079898"/>
+<status status="PASS" start="2024-11-27T07:16:08.467838" elapsed="0.157762"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:59.277012" elapsed="0.079898"/>
+<status status="PASS" start="2024-11-27T07:16:08.466838" elapsed="0.158762"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-26T07:54:04.357401" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-11-27T07:16:13.627008" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-26T07:53:59.356910" elapsed="5.000491"/>
+<status status="PASS" start="2024-11-27T07:16:08.626596" elapsed="5.000941"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:53:53.702957" elapsed="10.654444"/>
+<status status="PASS" start="2024-11-27T07:16:03.360835" elapsed="10.266702"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-11-26T07:54:04.358454" elapsed="0.001948"/>
+<status status="NOT RUN" start="2024-11-27T07:16:13.629093" elapsed="0.001205"/>
 </kw>
-<status status="NOT RUN" start="2024-11-26T07:54:04.358454" elapsed="0.001948"/>
+<status status="NOT RUN" start="2024-11-27T07:16:13.628536" elapsed="0.002767"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-26T07:54:04.361400" elapsed="2.249912"/>
+<status status="PASS" start="2024-11-27T07:16:13.632130" elapsed="2.402616"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:04.360402" elapsed="2.250910"/>
+<status status="PASS" start="2024-11-27T07:16:13.631303" elapsed="2.403443"/>
 </branch>
-<status status="PASS" start="2024-11-26T07:53:53.701958" elapsed="12.909354"/>
+<status status="PASS" start="2024-11-27T07:16:03.360835" elapsed="12.673911"/>
 </try>
 <tag>EPM_FORGOT_PW_002</tag>
-<status status="PASS" start="2024-11-26T07:53:53.701034" elapsed="12.911547"/>
+<status status="PASS" start="2024-11-27T07:16:03.359878" elapsed="12.676175"/>
 </test>
 <test id="s1-t3" name="[EPM_FORGOT_PW_003]" line="41">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:06.617477" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
+<msg time="2024-11-27T07:16:16.038771" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-26T07:54:06.616323" elapsed="5.216937"/>
+<status status="PASS" start="2024-11-27T07:16:16.038771" elapsed="4.667385"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-26T07:54:11.833260" elapsed="0.038896"/>
+<status status="PASS" start="2024-11-27T07:16:20.706156" elapsed="0.039380"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:06.615559" elapsed="5.256597"/>
+<status status="PASS" start="2024-11-27T07:16:16.038771" elapsed="4.706765"/>
 </kw>
 <kw name="InputValue">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:11.873152" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="empno"]'.</msg>
+<msg time="2024-11-27T07:16:20.746948" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="empno"]'.</msg>
 <arg>xpath=//*[@id="empno"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:11.872156" elapsed="0.236798"/>
+<status status="PASS" start="2024-11-27T07:16:20.745950" elapsed="0.291005"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:12.108954" level="INFO">Typing text '' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2024-11-27T07:16:21.038666" level="INFO">Typing text '' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>xpath=//*[@id="email"]</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:12.108954" elapsed="0.056845"/>
+<status status="PASS" start="2024-11-27T07:16:21.036955" elapsed="0.274895"/>
 </kw>
 <arg>12456</arg>
 <arg>${EMPTY}</arg>
-<status status="PASS" start="2024-11-26T07:54:11.872156" elapsed="0.294641"/>
+<status status="PASS" start="2024-11-27T07:16:20.745950" elapsed="0.565900"/>
 </kw>
 <kw name="Click Submit Button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:12.166797" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
+<msg time="2024-11-27T07:16:21.312848" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
 <arg>xpath=/html/body/div[2]/div[2]/form/div[4]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:12.166797" elapsed="0.078788"/>
+<status status="PASS" start="2024-11-27T07:16:21.312848" elapsed="0.174271"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:12.166797" elapsed="0.078788"/>
+<status status="PASS" start="2024-11-27T07:16:21.311850" elapsed="0.175269"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-26T07:54:17.246087" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-11-27T07:16:26.487315" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-26T07:54:12.245585" elapsed="5.000502"/>
+<status status="PASS" start="2024-11-27T07:16:21.487119" elapsed="5.001193"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:06.615559" elapsed="10.630528"/>
+<status status="PASS" start="2024-11-27T07:16:16.038771" elapsed="10.449541"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-11-26T07:54:17.246087" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:26.489591" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-26T07:54:17.246087" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:26.488312" elapsed="0.001279"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-26T07:54:17.247133" elapsed="2.208387"/>
+<status status="PASS" start="2024-11-27T07:16:26.490637" elapsed="2.441339"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:17.247133" elapsed="2.208387"/>
+<status status="PASS" start="2024-11-27T07:16:26.489591" elapsed="2.442385"/>
 </branch>
-<status status="PASS" start="2024-11-26T07:54:06.615559" elapsed="12.839961"/>
+<status status="PASS" start="2024-11-27T07:16:16.038771" elapsed="12.893205"/>
 </try>
 <tag>EPM_FORGOT_PW_003</tag>
-<status status="PASS" start="2024-11-26T07:54:06.614330" elapsed="12.842243"/>
+<status status="PASS" start="2024-11-27T07:16:16.038771" elapsed="12.894476"/>
 </test>
 <test id="s1-t4" name="[EPM_FORGOT_PW_005]" line="54">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:19.461557" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
+<msg time="2024-11-27T07:16:28.937236" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-26T07:54:19.460557" elapsed="5.327030"/>
+<status status="PASS" start="2024-11-27T07:16:28.937236" elapsed="4.455498"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-26T07:54:24.787587" elapsed="0.044846"/>
+<status status="PASS" start="2024-11-27T07:16:33.392734" elapsed="0.037353"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:19.460557" elapsed="5.371876"/>
+<status status="PASS" start="2024-11-27T07:16:28.936280" elapsed="4.493807"/>
 </kw>
 <kw name="InputValue">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:24.833430" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="empno"]'.</msg>
+<msg time="2024-11-27T07:16:33.430087" level="INFO">Typing text '12456' into text field 'xpath=//*[@id="empno"]'.</msg>
 <arg>xpath=//*[@id="empno"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:24.833430" elapsed="0.183146"/>
+<status status="PASS" start="2024-11-27T07:16:33.430087" elapsed="0.234564"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:25.017679" level="INFO">Typing text 'ASDADSADASD@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2024-11-27T07:16:33.666448" level="INFO">Typing text 'ASDADSADASD@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>xpath=//*[@id="email"]</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:25.017679" elapsed="0.084662"/>
+<status status="PASS" start="2024-11-27T07:16:33.665447" elapsed="0.371486"/>
 </kw>
 <arg>12456</arg>
 <arg>ASDADSADASD@gmail.com</arg>
-<status status="PASS" start="2024-11-26T07:54:24.832433" elapsed="0.269908"/>
+<status status="PASS" start="2024-11-27T07:16:33.430087" elapsed="0.606846"/>
 </kw>
 <kw name="Click Submit Button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:25.102341" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
+<msg time="2024-11-27T07:16:34.037930" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
 <arg>xpath=/html/body/div[2]/div[2]/form/div[4]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:25.102341" elapsed="0.071803"/>
+<status status="PASS" start="2024-11-27T07:16:34.037930" elapsed="0.152794"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:25.102341" elapsed="0.071803"/>
+<status status="PASS" start="2024-11-27T07:16:34.036933" elapsed="0.154786"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="checkForgotEmail"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-26T07:54:25.174144" elapsed="0.023939"/>
+<status status="PASS" start="2024-11-27T07:16:34.192015" elapsed="0.037354"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:25.215033" level="INFO">${email_error} = Oops! Invalid input detected. Please verify your entry and try again. For assistance, contact support.</msg>
+<msg time="2024-11-27T07:16:34.265342" level="INFO">${email_error} = Oops! Invalid input detected. Please verify your entry and try again. For assistance, contact support.</msg>
 <var>${email_error}</var>
 <arg>xpath=//*[@id="checkForgotEmail"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:25.198107" elapsed="0.016926"/>
+<status status="PASS" start="2024-11-27T07:16:34.229369" elapsed="0.035973"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${email_error}</arg>
 <arg>Oops! Invalid input detected. Please verify your entry and try again. For assistance, contact support.</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-26T07:54:25.215033" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-27T07:16:34.266369" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-26T07:54:30.215520" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-11-27T07:16:39.267089" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-26T07:54:25.215033" elapsed="5.000487"/>
+<status status="PASS" start="2024-11-27T07:16:34.266369" elapsed="5.000720"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:19.460022" elapsed="10.755498"/>
+<status status="PASS" start="2024-11-27T07:16:28.936280" elapsed="10.330809"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-11-26T07:54:30.216524" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:39.267089" elapsed="0.001313"/>
 </kw>
-<status status="NOT RUN" start="2024-11-26T07:54:30.215520" elapsed="0.002000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:39.267089" elapsed="0.002308"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-26T07:54:30.217520" elapsed="2.177027"/>
+<status status="PASS" start="2024-11-27T07:16:39.270080" elapsed="2.374116"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:30.217520" elapsed="2.177724"/>
+<status status="PASS" start="2024-11-27T07:16:39.270080" elapsed="2.374116"/>
 </branch>
-<status status="PASS" start="2024-11-26T07:54:19.460022" elapsed="12.935222"/>
+<status status="PASS" start="2024-11-27T07:16:28.936280" elapsed="12.707916"/>
 </try>
 <tag>EPM_FORGOT_PW_005</tag>
-<status status="PASS" start="2024-11-26T07:54:19.458514" elapsed="12.937757"/>
+<status status="PASS" start="2024-11-27T07:16:28.935242" elapsed="12.710334"/>
 </test>
 <test id="s1-t5" name="[EPM_FORGOT_PW_006]" line="70">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:32.400277" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
+<msg time="2024-11-27T07:16:41.648566" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-26T07:54:32.400277" elapsed="5.027857"/>
+<status status="PASS" start="2024-11-27T07:16:41.648566" elapsed="4.490971"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.428134" elapsed="0.048864"/>
+<status status="PASS" start="2024-11-27T07:16:46.139537" elapsed="0.046570"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:32.399233" elapsed="5.077765"/>
+<status status="PASS" start="2024-11-27T07:16:41.648566" elapsed="4.537541"/>
 </kw>
 <kw name="InputValue">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:37.477997" level="INFO">Typing text '99999' into text field 'xpath=//*[@id="empno"]'.</msg>
+<msg time="2024-11-27T07:16:46.188170" level="INFO">Typing text '99999' into text field 'xpath=//*[@id="empno"]'.</msg>
 <arg>xpath=//*[@id="empno"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.477997" elapsed="0.193636"/>
+<status status="PASS" start="2024-11-27T07:16:46.188104" elapsed="0.293823"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:37.671633" level="INFO">Typing text 'cruzchristiankeirre7675@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2024-11-27T07:16:46.483143" level="INFO">Typing text 'cruzchristiankeirre7675@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>xpath=//*[@id="email"]</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.671633" elapsed="0.085764"/>
+<status status="PASS" start="2024-11-27T07:16:46.482923" elapsed="0.304639"/>
 </kw>
 <arg>99999</arg>
 <arg>cruzchristiankeirre7675@gmail.com</arg>
-<status status="PASS" start="2024-11-26T07:54:37.476998" elapsed="0.280399"/>
+<status status="PASS" start="2024-11-27T07:16:46.187106" elapsed="0.600456"/>
 </kw>
 <kw name="Click Submit Button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:37.757397" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
+<msg time="2024-11-27T07:16:46.788559" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[2]/form/div[4]/div/button'.</msg>
 <arg>xpath=/html/body/div[2]/div[2]/form/div[4]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.757397" elapsed="0.070806"/>
+<status status="PASS" start="2024-11-27T07:16:46.787562" elapsed="0.189115"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:37.757397" elapsed="0.070806"/>
+<status status="PASS" start="2024-11-27T07:16:46.787562" elapsed="0.189666"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="checkForgotUsername"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.828203" elapsed="0.020944"/>
+<status status="PASS" start="2024-11-27T07:16:46.977228" elapsed="0.058381"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:37.866100" level="INFO">${username_error} = Oops! Invalid input detected. Please verify your entry and try again. For assistance, contact support.</msg>
+<msg time="2024-11-27T07:16:47.090191" level="INFO">${username_error} = Oops! Invalid input detected. Please verify your entry and try again. For assistance, contact support.</msg>
 <var>${username_error}</var>
 <arg>xpath=//*[@id="checkForgotUsername"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.849147" elapsed="0.016953"/>
+<status status="PASS" start="2024-11-27T07:16:47.036653" elapsed="0.053538"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${username_error}</arg>
 <arg>Oops! Invalid input detected. Please verify your entry and try again. For assistance, contact support.</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.866100" elapsed="0.000999"/>
+<status status="PASS" start="2024-11-27T07:16:47.091215" elapsed="0.001013"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-26T07:54:42.867642" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-11-27T07:16:52.093065" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-26T07:54:37.867233" elapsed="5.000409"/>
+<status status="PASS" start="2024-11-27T07:16:47.092228" elapsed="5.000837"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:32.399233" elapsed="10.468409"/>
+<status status="PASS" start="2024-11-27T07:16:41.648566" elapsed="10.444499"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-11-26T07:54:42.867642" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:52.093065" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-26T07:54:42.867642" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:52.093065" elapsed="0.000000"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-26T07:54:42.867642" elapsed="2.157453"/>
+<status status="PASS" start="2024-11-27T07:16:52.093065" elapsed="2.345957"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:42.867642" elapsed="2.157453"/>
+<status status="PASS" start="2024-11-27T07:16:52.093065" elapsed="2.345957"/>
 </branch>
-<status status="PASS" start="2024-11-26T07:54:32.399233" elapsed="12.625862"/>
+<status status="PASS" start="2024-11-27T07:16:41.648566" elapsed="12.790456"/>
 </try>
 <tag>EPM_FORGOT_PW_006</tag>
-<status status="PASS" start="2024-11-26T07:54:32.398240" elapsed="12.628022"/>
+<status status="PASS" start="2024-11-27T07:16:41.647570" elapsed="12.792678"/>
 </test>
 <test id="s1-t6" name="[EPM_FORGOT_PW_007]" line="86">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:45.031080" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
+<msg time="2024-11-27T07:16:54.444281" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/forgot/forgot_password.php'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-26T07:54:45.030085" elapsed="5.347741"/>
+<status status="PASS" start="2024-11-27T07:16:54.444281" elapsed="4.387102"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-26T07:54:50.378823" elapsed="0.045874"/>
+<status status="PASS" start="2024-11-27T07:16:58.831383" elapsed="0.041082"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:45.029087" elapsed="5.395610"/>
+<status status="PASS" start="2024-11-27T07:16:54.443242" elapsed="4.430260"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-11-26T07:54:50.424697" level="INFO">Clicking link 'xpath=/html/body/div[2]/div[2]/div/div/label/a'.</msg>
+<msg time="2024-11-27T07:16:58.874499" level="INFO">Clicking link 'xpath=/html/body/div[2]/div[2]/div/div/label/a'.</msg>
 <arg>xpath=/html/body/div[2]/div[2]/div/div/label/a</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-26T07:54:50.424697" elapsed="0.495601"/>
+<status status="PASS" start="2024-11-27T07:16:58.873502" elapsed="0.607289"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:45.029087" elapsed="5.892121"/>
+<status status="PASS" start="2024-11-27T07:16:54.443242" elapsed="5.037902"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-11-26T07:54:50.921208" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:59.481144" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-26T07:54:50.921208" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-27T07:16:59.481144" elapsed="0.000000"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-26T07:54:52.921773" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-27T07:17:01.481661" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-26T07:54:50.921208" elapsed="2.000565"/>
+<status status="PASS" start="2024-11-27T07:16:59.481144" elapsed="2.000517"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-26T07:54:52.921773" elapsed="2.166151"/>
+<status status="PASS" start="2024-11-27T07:17:01.481661" elapsed="2.331723"/>
 </kw>
-<status status="PASS" start="2024-11-26T07:54:50.921208" elapsed="4.167510"/>
+<status status="PASS" start="2024-11-27T07:16:59.481144" elapsed="4.332240"/>
 </branch>
-<status status="PASS" start="2024-11-26T07:54:45.029087" elapsed="10.059631"/>
+<status status="PASS" start="2024-11-27T07:16:54.443242" elapsed="9.370142"/>
 </try>
 <tag>EPM_FORGOT_PW_007</tag>
-<status status="PASS" start="2024-11-26T07:54:45.028119" elapsed="10.061600"/>
+<status status="PASS" start="2024-11-27T07:16:54.442247" elapsed="9.372451"/>
 </test>
-<status status="PASS" start="2024-11-26T07:53:34.581141" elapsed="80.510613"/>
+<status status="PASS" start="2024-11-27T07:15:44.195562" elapsed="79.621653"/>
 </suite>
 <statistics>
 <total>

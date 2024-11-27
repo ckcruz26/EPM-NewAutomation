@@ -19,6 +19,10 @@ Open WebApp using Chrome
     Maximize Browser Window
 
 #Registration Resources
+Open WebApp using Chrome Registration
+    Open Browser    https://172.31.32.64/registration_pilot/mainRegister.php    ${browserName}    options=add_argument("--ignore-certificate-errors")
+    Maximize Browser Window
+
 Input EmpNo to Validate
     [Arguments]    ${username} 
     Input Text    xpath=//*[@id="txtSearch"]    ${username}

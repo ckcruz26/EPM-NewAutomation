@@ -131,11 +131,12 @@ Resource    ../../resources/EPM_Resource.robot
         IF  ${i} == 3
             Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]
             ${error_msg}    Get Text    xpath=//*[@id="modalDynamicMessage"]
-            Should Be Equal    ${error_msg}    Oops! Your account has been locked due to multiple incorrect attempts!
+            Should Be Equal    ${error_msg}    Oops! Your account has been locked due to multiple incorrect attempts!    
             Close Browser
         END 
     END
 [EPM_LOGIN_010]
+    [Tags]   EPM_LOGIN_010
     TRY
         Open WebApp using Chrome
         #DUMMY ACCOUNT -  1
@@ -151,6 +152,7 @@ Resource    ../../resources/EPM_Resource.robot
         Close Browser
     END
 [EPM_LOGIN_011]
+    [Tags]   EPM_LOGIN_011
     TRY
         Open WebApp using Chrome
         #DUMMY ACCOUNT -  2
