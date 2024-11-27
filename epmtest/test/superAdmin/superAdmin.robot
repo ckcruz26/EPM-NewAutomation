@@ -7,6 +7,8 @@ Resource        ../../resources/EPM_Resource.robot
 ${xpath}       //select[@name='userManage_length']
 @{values}      10   25   50   100
 
+@{pos_module_search_val}    SOFTWARE QA ENGINEER    SQA    CHRISTIAN KEIRRE    2024-11-13    SALAZAR    2024-06-14	
+${xpath_usr_mg_lvl}    //*[@id="table_employees_length"]/label/select
 
 *** Test Cases ***
 [EPM_SUPER_ADMIN_001]
@@ -159,7 +161,7 @@ ${xpath}       //select[@name='userManage_length']
     END
 
 [EPM_SUPER_ADMIN_130]
-    [Tags]  EPM_SUPER_ADMIN_127
+    [Tags]  EPM_SUPER_ADMIN_130
     TRY
         Open WebApp using Chrome
         InputValue    username=${personnelUN}    password=${personnelPW}
@@ -167,6 +169,39 @@ ${xpath}       //select[@name='userManage_length']
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]    2s
         Click Button          xpath=//*[@id="modalDynamicButton"]
         Positive Testing Manage Position Name    COMP ENGINEER I    CP ENG I
+    EXCEPT   Error
+        Fatal Error
+    FINALLY
+        Sleep    2s
+        Close Browser
+    END
+
+
+[EPM_SUPER_ADMIN_131]
+    [Tags]  EPM_SUPER_ADMIN_131
+    TRY
+        Open WebApp using Chrome
+        InputValue    username=${personnelUN}    password=${personnelPW}
+        Click Login Button
+        Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]    2s
+        Click Button          xpath=//*[@id="modalDynamicButton"]
+        Search Position in Search Box
+    EXCEPT   Error
+        Fatal Error
+    FINALLY
+        Sleep    2s
+        Close Browser
+    END
+
+[EPM_SUPER_ADMIN_148]
+    [Tags]    EPM_SUPER_ADMIN_148
+    TRY
+        Open WebApp using Chrome
+        InputValue    username=${personnelUN}    password=${personnelPW}
+        Click Login Button
+        Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]    2s
+        Click Button          xpath=//*[@id="modalDynamicButton"]
+        Filter User Management Level By Selecting Value
     EXCEPT   Error
         Fatal Error
     FINALLY
@@ -258,9 +293,6 @@ Filter Positions By Selecting Value
     Wait Until Element Is Visible    xpath=//*[@id="sysAdmin"]/ul/li[4]
     Click Element    xpath=//*[@id="sysAdmin"]/ul/li[4]
     
-    Page Should Contain Element   xpath=//select[@name='userManage_length']
-    Select From List By Label      xpath=//select[@name='userManage_length']    10
-
     FOR    ${value}    IN    @{values}
         Log    Selecting value ${value} from the dropdown
         Page Should Contain Element    xpath=${xpath}    2s
@@ -307,5 +339,32 @@ Manage Positions Filter By Selecting Value
         Log    Selecting value ${value} from the dropdown
         Page Should Contain Element    xpath=${xpath_pos}    2s
         Select From List By Label      xpath=${xpath_pos}    ${value}
+        Sleep    3s
+    END
+
+Search Position in Search Box
+    Click Link    xpath=/html/body/div/header/nav/a
+    Click Element    xpath=//*[@id="sysAdmin"]
+    Wait Until Element Is Visible    xpath=//*[@id="sysAdmin"]/ul/li[5]
+    Click Element    xpath=//*[@id="sysAdmin"]/ul/li[5]
+    Wait Until Element Is Visible     xpath=//*[@id="tblManagePosition_filter"]/label/input
+
+    FOR   ${iterate_search}  IN  @{pos_module_search_val}
+        Input Text    xpath=//*[@id="tblManagePosition_filter"]/label/input   ${iterate_search}
+        Sleep    2s
+        Clear Element Text    xpath=//*[@id="tblManagePosition_filter"]/label/input
+    END
+    
+
+Filter User Management Level By Selecting Value
+    Click Link    xpath=/html/body/div/header/nav/a
+    Click Element    xpath=//*[@id="superAdmin"]
+    Wait Until Element Is Visible    xpath=//*[@id="table_employees_length"]/label/select
+
+   
+    FOR    ${value}    IN    @{values}
+        Log    Selecting value ${value} from the dropdown
+        Page Should Contain Element    xpath=${xpath_usr_mg_lvl}    2s
+        Select From List By Label      xpath=${xpath_usr_mg_lvl}    ${value}
         Sleep    3s
     END
