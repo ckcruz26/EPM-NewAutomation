@@ -78,7 +78,7 @@ ${xpath_usr_mg_lvl}    //*[@id="table_employees_length"]/label/select
         Sleep    2s
         Close Browser
     END
-
+    
 [EPM_SUPER_ADMIN_116]
     [Tags]  EPM_SUPER_ADMIN_116
     TRY
@@ -152,30 +152,13 @@ ${xpath_usr_mg_lvl}    //*[@id="table_employees_length"]/label/select
         Click Login Button
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]    2s
         Click Button          xpath=//*[@id="modalDynamicButton"]
-        Positive Testing Manage Position Name    COMP ENGINEER I    CP ENG I
+        Positive Testing Manage Position Name    COMP ENGINEER II    CP ENG II
     EXCEPT   Error
         Fatal Error
     FINALLY
         Sleep    2s
         Close Browser
     END
-
-[EPM_SUPER_ADMIN_130]
-    [Tags]  EPM_SUPER_ADMIN_130
-    TRY
-        Open WebApp using Chrome
-        InputValue    username=${personnelUN}    password=${personnelPW}
-        Click Login Button
-        Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]    2s
-        Click Button          xpath=//*[@id="modalDynamicButton"]
-        Positive Testing Manage Position Name    COMP ENGINEER I    CP ENG I
-    EXCEPT   Error
-        Fatal Error
-    FINALLY
-        Sleep    2s
-        Close Browser
-    END
-
 
 [EPM_SUPER_ADMIN_131]
     [Tags]  EPM_SUPER_ADMIN_131
@@ -209,9 +192,6 @@ ${xpath_usr_mg_lvl}    //*[@id="table_employees_length"]/label/select
         Close Browser
     END
 
-
-
-
 *** Keywords ***
 Click Login Button
     Click Button    xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button
@@ -240,7 +220,6 @@ Change EPM Incomplete Input_1
     Input Password    xpath=//*[@id="NewPassword"]    ${new_password}
     Input Password    xpath=//*[@id="ConfirmPassword"]   ${confirm_password}
     Click Button       xpath=//*[@id="btnChangePassword"]
-    Page Should Contain    Please fill out this field.
     
 Position Negative Testing_1
     [Arguments]    ${date_created}

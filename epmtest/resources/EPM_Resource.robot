@@ -7,6 +7,9 @@ ${browserName}        Chrome
 ${personnelUN}        12456
 ${personnelPW}        P@ssw0rd
 
+${sys_personnel_un}    8277
+
+
 #Registration Variables
 ${UploadFiletest}     css=[type='file']
 ${AddFile}            C:/Users/ckcruz/Downloads/03-12456.png
