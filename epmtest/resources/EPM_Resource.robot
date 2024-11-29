@@ -4,10 +4,14 @@ Library        SeleniumLibrary
 *** Variables ***
 ${baseURL}            https://172.31.32.64/registration_pilot/
 ${browserName}        Chrome
-${personnelUN}        12456
-${personnelPW}        P@ssw0rd
 
+#Account Levels
+${personnelUN}        12456
 ${sys_personnel_un}    8277
+${user_un}            12453
+
+#General User Passwords
+${personnelPW}        P@ssw0rd
 
 
 #Registration Variables

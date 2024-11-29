@@ -153,7 +153,7 @@ ${sys_personnel_un}    8277
         Click Login Button
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]    2s
         Click Button          xpath=//*[@id="modalDynamicButton"]
-        Positive Testing Manage Position Name    COMP ENGINEER 5    CP ENG 5
+        Positive Testing Manage Position Name    COMP ENGINEER V   CP ENG V
     EXCEPT   Error
         Fatal Error
     FINALLY
