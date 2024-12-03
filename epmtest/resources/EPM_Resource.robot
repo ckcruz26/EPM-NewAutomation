@@ -9,6 +9,7 @@ ${browserName}        Chrome
 ${personnelUN}        12456
 ${sys_personnel_un}    8277
 ${user_un}            12453
+${fmd_un}             8481
 
 #General User Passwords
 ${personnelPW}        P@ssw0rd
