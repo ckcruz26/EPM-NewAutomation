@@ -170,7 +170,6 @@ Click Login Button
 Click Profile Menu
     Click Element    xpath=//*[@id="profilePage"]
     
-
 Change Password EPM
     [Arguments]    ${old_password}    ${new_password}  ${confirm_password}
     Click Button    xpath=/html/body/div/div/section/div/div[1]/div/div/div/button
@@ -178,11 +177,18 @@ Change Password EPM
     Input Password    xpath=//*[@id="OldPassword"]   ${old_password}    
     Input Password    xpath=//*[@id="NewPassword"]    ${new_password}
     Input Password    xpath=//*[@id="ConfirmPassword"]   ${confirm_password}
-    Click Button       xpath=//*[@id="btnChangePassword"]
-    Wait Until Element Is Visible    xpath=//*[@id="modalNotif-message"]
-    ${succ_msg_pw}     Get Text   xpath=//*[@id="modalNotif-message"]
-    Should Be Equal    ${succ_msg_pw}    Password Changed!
-    Click Button       xpath=//*[@id="modalNotif"]/div/div/div[3]/button
+    Click Button       xpath=//*[@id="btnSubmit"]
+
+     FOR    ${msgs}    IN    @{messages}
+        Log    Processing message: ${msgs}
+        Wait Until Element Is Visible    xpath=//*[@id="modalDynamicConfirmContent"]
+        ${modal_msg}=    Get Text    xpath=//*[@id="modalDynamicConfirmMessage"]
+        Sleep    3s
+        Log To Console    Modal Message: ${modal_msg}
+        Should Be Equal    ${modal_msg}    ${msgs}
+        Click Button    xpath=//*[@id="modalDynamicConfirmButtonYes"]
+    END
+
     Sleep    2
 
 Change EPM Incomplete Input_1

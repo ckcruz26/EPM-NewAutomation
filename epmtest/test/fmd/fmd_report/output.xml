@@ -1,1370 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-02T13:21:06.750873" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-19T15:31:35.267411" rpa="false" schemaversion="5">
 <suite id="s1" name="EPM FMD" source="C:\Users\ckcruz\Desktop\EPM Matters\Test Environment\epmtest\test\fmd\EPM_FMD.robot">
-<test id="s1-t1" name="[EPM_FMD_001]" line="7">
+<test id="s1-t1" name="[EPM_FMD_003]" line="40">
 <try>
 <branch type="TRY">
 <kw name="Open WebApp using Chrome" owner="EPM_Resource">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:07.073179" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
+<msg time="2024-12-19T15:31:35.677075" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_staging/'.</msg>
 <arg>${baseURL}</arg>
 <arg>${browserName}</arg>
 <arg>options=add_argument("--ignore-certificate-errors")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:21:07.072181" elapsed="2.975305"/>
+<status status="PASS" start="2024-12-19T15:31:35.677075" elapsed="4.701408"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.047486" elapsed="0.050845"/>
+<status status="PASS" start="2024-12-19T15:31:40.378483" elapsed="0.037693"/>
 </kw>
-<status status="PASS" start="2024-12-02T13:21:07.072181" elapsed="3.027050"/>
+<status status="PASS" start="2024-12-19T15:31:35.676077" elapsed="4.741225"/>
 </kw>
 <kw name="InputValue" owner="EPM_Resource">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:10.100230" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
+<msg time="2024-12-19T15:31:40.420234" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
 <arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.100230" elapsed="0.223375"/>
+<status status="PASS" start="2024-12-19T15:31:40.418300" elapsed="0.505106"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:10.324567" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:21:10.426609" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-12-19T15:31:40.923406" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
+<msg time="2024-12-19T15:31:41.013754" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.323605" elapsed="0.149876"/>
+<status status="PASS" start="2024-12-19T15:31:40.923406" elapsed="0.208653"/>
 </kw>
 <arg>username=${fmd_un}</arg>
 <arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:21:10.099231" elapsed="0.374250"/>
+<status status="PASS" start="2024-12-19T15:31:40.417302" elapsed="0.714757"/>
 </kw>
 <kw name="Click Login Button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:10.474481" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
+<msg time="2024-12-19T15:31:41.133059" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
 <arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.474481" elapsed="0.076306"/>
+<status status="PASS" start="2024-12-19T15:31:41.133059" elapsed="0.217916"/>
 </kw>
-<status status="PASS" start="2024-12-02T13:21:10.473481" elapsed="0.077306"/>
+<status status="PASS" start="2024-12-19T15:31:41.133059" elapsed="0.217916"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="modalDynamicMessage"]</arg>
 <arg>2s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.551662" elapsed="0.255165"/>
+<status status="PASS" start="2024-12-19T15:31:41.350975" elapsed="0.296615"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:10.806827" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
+<msg time="2024-12-19T15:31:41.647590" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
 <arg>xpath=//*[@id="modalDynamicButton"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.806827" elapsed="0.158069"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:07.071275" elapsed="3.893621"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:21:10.965884" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:21:10.965884" elapsed="0.000000"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:21:12.966731" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:21:10.965884" elapsed="2.000847"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:21:12.966731" elapsed="2.266073"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:10.965884" elapsed="4.267861"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:21:07.071275" elapsed="8.162470"/>
-</try>
-<tag>EPM_FMD_001</tag>
-<status status="PASS" start="2024-12-02T13:21:07.071275" elapsed="8.162470"/>
-</test>
-<test id="s1-t2" name="[EPM_FMD_002]" line="23">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:15.238764" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:21:15.238764" elapsed="3.026609"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:21:18.266342" elapsed="0.033927"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:15.237766" elapsed="3.063484"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:18.304241" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:18.303245" elapsed="0.197570"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:18.501818" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:21:18.607616" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:18.500815" elapsed="0.149687"/>
-</kw>
-<arg>${fmd_un}</arg>
-<arg>abcdefg.</arg>
-<status status="PASS" start="2024-12-02T13:21:18.301250" elapsed="0.349252"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:18.650502" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:18.650502" elapsed="0.073806"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:18.650502" elapsed="0.074801"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:18.725303" elapsed="0.281920"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:19.070709" level="INFO">${error_msg} = Oops! Invalid Credentials. Please contact Personnel Section for further assistance in verifying your information.</msg>
-<var>${error_msg}</var>
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:19.007223" elapsed="0.064487"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${error_msg}</arg>
-<arg>Oops! Invalid Credentials. Please contact Personnel Section for further assistance in verifying your information.</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-12-02T13:21:19.074716" elapsed="0.001980"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:19.077691" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:19.077691" elapsed="0.129376"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:15.237766" elapsed="3.969301"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:21:19.208066" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:21:19.207067" elapsed="0.000999"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:21:21.208496" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:21:19.208066" elapsed="2.000430"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:21:21.208496" elapsed="2.166386"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:19.208066" elapsed="4.167536"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:21:15.237405" elapsed="8.138197"/>
-</try>
-<tag>EPM_FMD_002</tag>
-<status status="PASS" start="2024-12-02T13:21:15.235734" elapsed="8.141863"/>
-</test>
-<test id="s1-t3" name="[EPM_FMD_003]" line="40">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:23.383578" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:21:23.383578" elapsed="3.195772"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:21:26.579350" elapsed="0.041080"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:23.382621" elapsed="3.237809"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:26.621387" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:26.621387" elapsed="0.198471"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:26.820853" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:21:26.921583" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:26.819858" elapsed="0.145651"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:21:26.621387" elapsed="0.344122"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:26.965509" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:26.965509" elapsed="0.073968"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:26.965509" elapsed="0.073968"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:27.039477" elapsed="0.253777"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:27.293254" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:27.293254" elapsed="0.158244"/>
+<status status="PASS" start="2024-12-19T15:31:41.647590" elapsed="0.273559"/>
 </kw>
 <kw name="Click Profile Menu">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:27.452497" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
+<msg time="2024-12-19T15:31:41.923185" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
 <arg>xpath=//*[@id="profilePage"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:27.451498" elapsed="0.345617"/>
+<status status="PASS" start="2024-12-19T15:31:41.922145" elapsed="0.709031"/>
 </kw>
-<status status="PASS" start="2024-12-02T13:21:27.451498" elapsed="0.345617"/>
+<status status="PASS" start="2024-12-19T15:31:41.921149" elapsed="0.710027"/>
 </kw>
 <kw name="Change Password EPM">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:27.798112" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
+<msg time="2024-12-19T15:31:42.633171" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
 <arg>xpath=/html/body/div/div/section/div/div[1]/div/div/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:27.798112" elapsed="0.185466"/>
+<status status="PASS" start="2024-12-19T15:31:42.632174" elapsed="0.495781"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="changePassword"]/div/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:27.983578" elapsed="0.285155"/>
+<status status="PASS" start="2024-12-19T15:31:43.127955" elapsed="0.335511"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:28.268733" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
-<msg time="2024-12-02T13:21:28.327576" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-12-19T15:31:43.465122" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
+<msg time="2024-12-19T15:31:43.600511" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>xpath=//*[@id="OldPassword"]</arg>
 <arg>${old_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.268733" elapsed="0.112705"/>
+<status status="PASS" start="2024-12-19T15:31:43.464299" elapsed="0.270140"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:28.381438" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
-<msg time="2024-12-02T13:21:28.420327" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-12-19T15:31:43.735436" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
+<msg time="2024-12-19T15:31:43.796350" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>xpath=//*[@id="NewPassword"]</arg>
 <arg>${new_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.381438" elapsed="0.091993"/>
+<status status="PASS" start="2024-12-19T15:31:43.735436" elapsed="0.191417"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:28.474427" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
-<msg time="2024-12-02T13:21:28.504347" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-12-19T15:31:43.926853" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
+<msg time="2024-12-19T15:31:44.018875" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>xpath=//*[@id="ConfirmPassword"]</arg>
 <arg>${confirm_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.473431" elapsed="0.075797"/>
+<status status="PASS" start="2024-12-19T15:31:43.926853" elapsed="0.165674"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:28.550224" level="INFO">Clicking button 'xpath=//*[@id="btnChangePassword"]'.</msg>
-<arg>xpath=//*[@id="btnChangePassword"]</arg>
+<msg time="2024-12-19T15:31:44.092527" level="INFO">Clicking button 'xpath=//*[@id="btnSubmit"]'.</msg>
+<arg>xpath=//*[@id="btnSubmit"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.549228" elapsed="0.078891"/>
+<status status="PASS" start="2024-12-19T15:31:44.092527" elapsed="0.147917"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-19T15:31:44.242439" level="INFO">Processing message: Would you like to confirm and save the changes now?</msg>
+<arg>Processing message: ${msgs}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-19T15:31:44.241442" elapsed="0.000997"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalNotif-message"]</arg>
+<arg>xpath=//*[@id="modalDynamicConfirmContent"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.629122" elapsed="0.256795"/>
+<status status="PASS" start="2024-12-19T15:31:44.242439" elapsed="0.288677"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:28.924847" level="INFO">${succ_msg_pw} = Password Changed!</msg>
-<var>${succ_msg_pw}</var>
-<arg>xpath=//*[@id="modalNotif-message"]</arg>
+<msg time="2024-12-19T15:31:44.586100" level="INFO">${modal_msg} = Would you like to confirm and save the changes now?</msg>
+<var>${modal_msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.885917" elapsed="0.038930"/>
+<status status="PASS" start="2024-12-19T15:31:44.531340" elapsed="0.054760"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-19T15:31:47.587934" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-19T15:31:44.587098" elapsed="3.000836"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Modal Message: ${modal_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-19T15:31:47.587934" elapsed="0.000998"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
-<arg>${succ_msg_pw}</arg>
-<arg>Password Changed!</arg>
+<arg>${modal_msg}</arg>
+<arg>${msgs}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-12-02T13:21:28.926065" elapsed="0.000786"/>
+<status status="PASS" start="2024-12-19T15:31:47.588932" elapsed="0.000000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:28.927797" level="INFO">Clicking button 'xpath=//*[@id="modalNotif"]/div/div/div[3]/button'.</msg>
-<msg time="2024-12-02T13:21:30.153302" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-12-02T13:21:30.154300" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="btn btn-default" onclick="javascript:window.location.reload();" data-dismiss="modal"&gt;...&lt;/button&gt; is not clickable at point (1073, 172). Other element would receive the click: &lt;div class="col-md-12"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF614E76CB5+28821]
-	(No symbol) [0x00007FF614DE3840]
-	(No symbol) [0x00007FF614C8578A]
-	(No symbol) [0x00007FF614CE0E8E]
-	(No symbol) [0x00007FF614CDE92C]
-	(No symbol) [0x00007FF614CDBAF6]
-	(No symbol) [0x00007FF614CDAA51]
-	(No symbol) [0x00007FF614CCCBA0]
-	(No symbol) [0x00007FF614CFF2FA]
-	(No symbol) [0x00007FF614CCC3F6]
-	(No symbol) [0x00007FF614CFF510]
-	(No symbol) [0x00007FF614D1F412]
-	(No symbol) [0x00007FF614CFF0A3]
-	(No symbol) [0x00007FF614CCA778]
-	(No symbol) [0x00007FF614CCB8E1]
-	GetHandleVerifier [0x00007FF6151AFCAD+3408013]
-	GetHandleVerifier [0x00007FF6151C741F+3504127]
-	GetHandleVerifier [0x00007FF6151BB5FD+3455453]
-	GetHandleVerifier [0x00007FF614F3BDBB+835995]
-	(No symbol) [0x00007FF614DEEB5F]
-	(No symbol) [0x00007FF614DEA814]
-	(No symbol) [0x00007FF614DEA9AD]
-	(No symbol) [0x00007FF614DDA199]
-	BaseThreadInitThunk [0x00007FF88F4D7374+20]
-	RtlUserThreadStart [0x00007FF88F7BCC91+33]
-</msg>
-<arg>xpath=//*[@id="modalNotif"]/div/div/div[3]/button</arg>
+<msg time="2024-12-19T15:31:47.588932" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonYes"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonYes"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2024-12-02T13:21:28.926851" elapsed="1.231708">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="btn btn-default" onclick="javascript:window.location.reload();" data-dismiss="modal"&gt;...&lt;/button&gt; is not clickable at point (1073, 172). Other element would receive the click: &lt;div class="col-md-12"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF614E76CB5+28821]
-	(No symbol) [0x00007FF614DE3840]
-	(No symbol) [0x00007FF614C8578A]
-	(No symbol) [0x00007FF614CE0E8E]
-	(No symbol) [0x00007FF614CDE92C]
-	(No symbol) [0x00007FF614CDBAF6]
-	(No symbol) [0x00007FF614CDAA51]
-	(No symbol) [0x00007FF614CCCBA0]
-	(No symbol) [0x00007FF614CFF2FA]
-	(No symbol) [0x00007FF614CCC3F6]
-	(No symbol) [0x00007FF614CFF510]
-	(No symbol) [0x00007FF614D1F412]
-	(No symbol) [0x00007FF614CFF0A3]
-	(No symbol) [0x00007FF614CCA778]
-	(No symbol) [0x00007FF614CCB8E1]
-	GetHandleVerifier [0x00007FF6151AFCAD+3408013]
-	GetHandleVerifier [0x00007FF6151C741F+3504127]
-	GetHandleVerifier [0x00007FF6151BB5FD+3455453]
-	GetHandleVerifier [0x00007FF614F3BDBB+835995]
-	(No symbol) [0x00007FF614DEEB5F]
-	(No symbol) [0x00007FF614DEA814]
-	(No symbol) [0x00007FF614DEA9AD]
-	(No symbol) [0x00007FF614DDA199]
-	BaseThreadInitThunk [0x00007FF88F4D7374+20]
-	RtlUserThreadStart [0x00007FF88F7BCC91+33]
-</status>
+<status status="PASS" start="2024-12-19T15:31:47.588932" elapsed="0.139731"/>
+</kw>
+<var name="${msgs}">Would you like to confirm and save the changes now?</var>
+<status status="PASS" start="2024-12-19T15:31:44.241442" elapsed="3.487221"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-19T15:31:47.729661" level="INFO">Processing message: Your password has been successfully updated. Would you like to stay logged in or log out and sign in again with your new password?</msg>
+<arg>Processing message: ${msgs}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-19T15:31:47.728663" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="modalDynamicConfirmContent"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-19T15:31:47.729661" elapsed="0.078426"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-19T15:31:47.862947" level="INFO">${modal_msg} = Your password has been successfully updated. Would you like to stay logged in or log out and sign in again with your new password?</msg>
+<var>${modal_msg}</var>
+<arg>xpath=//*[@id="modalDynamicConfirmMessage"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-19T15:31:47.808087" elapsed="0.054860"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-19T15:31:50.864081" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-19T15:31:47.863858" elapsed="3.000223"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Modal Message: ${modal_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-19T15:31:50.864081" elapsed="0.001009"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${modal_msg}</arg>
+<arg>${msgs}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-19T15:31:50.865090" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-19T15:31:50.865090" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicConfirmButtonYes"]'.</msg>
+<arg>xpath=//*[@id="modalDynamicConfirmButtonYes"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-19T15:31:50.865090" elapsed="0.868327"/>
+</kw>
+<var name="${msgs}">Your password has been successfully updated. Would you like to stay logged in or log out and sign in again with your new password?</var>
+<status status="PASS" start="2024-12-19T15:31:47.728663" elapsed="4.004754"/>
+</iter>
+<var>${msgs}</var>
+<value>@{messages}</value>
+<status status="PASS" start="2024-12-19T15:31:44.240444" elapsed="7.492973"/>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-19T15:31:53.733888" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-12-02T13:21:30.159285" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-19T15:31:51.733417" elapsed="2.000471"/>
 </kw>
 <arg>P@ssw0rd</arg>
 <arg>P@ssw0rd1.</arg>
 <arg>P@ssw0rd1.</arg>
-<status status="FAIL" start="2024-12-02T13:21:27.798112" elapsed="2.361173">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="btn btn-default" onclick="javascript:window.location.reload();" data-dismiss="modal"&gt;...&lt;/button&gt; is not clickable at point (1073, 172). Other element would receive the click: &lt;div class="col-md-12"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF614E76CB5+28821]
-	(No symbol) [0x00007FF614DE3840]
-	(No symbol) [0x00007FF614C8578A]
-	(No symbol) [0x00007FF614CE0E8E]
-	(No symbol) [0x00007FF614CDE92C]
-	(No symbol) [0x00007FF614CDBAF6]
-	(No symbol) [0x00007FF614CDAA51]
-	(No symbol) [0x00007FF614CCCBA0]
-	(No symbol) [0x00007FF614CFF2FA]
-	(No symbol) [0x00007FF614CCC3F6]
-	(No symbol) [0x00007FF614CFF510]
-	(No symbol) [0x00007FF614D1F412]
-	(No symbol) [0x00007FF614CFF0A3]
-	(No symbol) [0x00007FF614CCA778]
-	(No symbol) [0x00007FF614CCB8E1]
-	GetHandleVerifier [0x00007FF6151AFCAD+3408013]
-	GetHandleVerifier [0x00007FF6151C741F+3504127]
-	GetHandleVerifier [0x00007FF6151BB5FD+3455453]
-	GetHandleVerifier [0x00007FF614F3BDBB+835995]
-	(No symbol) [0x00007FF614DEEB5F]
-	(No symbol) [0x00007FF614DEA814]
-	(No symbol) [0x00007FF614DEA9AD]
-	(No symbol) [0x00007FF614DDA199]
-	BaseThreadInitThunk [0x00007FF88F4D7374+20]
-	RtlUserThreadStart [0x00007FF88F7BCC91+33]
-</status>
+<status status="PASS" start="2024-12-19T15:31:42.632174" elapsed="11.101714"/>
 </kw>
-<status status="FAIL" start="2024-12-02T13:21:23.381599" elapsed="6.777686">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="btn btn-default" onclick="javascript:window.location.reload();" data-dismiss="modal"&gt;...&lt;/button&gt; is not clickable at point (1073, 172). Other element would receive the click: &lt;div class="col-md-12"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF614E76CB5+28821]
-	(No symbol) [0x00007FF614DE3840]
-	(No symbol) [0x00007FF614C8578A]
-	(No symbol) [0x00007FF614CE0E8E]
-	(No symbol) [0x00007FF614CDE92C]
-	(No symbol) [0x00007FF614CDBAF6]
-	(No symbol) [0x00007FF614CDAA51]
-	(No symbol) [0x00007FF614CCCBA0]
-	(No symbol) [0x00007FF614CFF2FA]
-	(No symbol) [0x00007FF614CCC3F6]
-	(No symbol) [0x00007FF614CFF510]
-	(No symbol) [0x00007FF614D1F412]
-	(No symbol) [0x00007FF614CFF0A3]
-	(No symbol) [0x00007FF614CCA778]
-	(No symbol) [0x00007FF614CCB8E1]
-	GetHandleVerifier [0x00007FF6151AFCAD+3408013]
-	GetHandleVerifier [0x00007FF6151C741F+3504127]
-	GetHandleVerifier [0x00007FF6151BB5FD+3455453]
-	GetHandleVerifier [0x00007FF614F3BDBB+835995]
-	(No symbol) [0x00007FF614DEEB5F]
-	(No symbol) [0x00007FF614DEA814]
-	(No symbol) [0x00007FF614DEA9AD]
-	(No symbol) [0x00007FF614DDA199]
-	BaseThreadInitThunk [0x00007FF88F4D7374+20]
-	RtlUserThreadStart [0x00007FF88F7BCC91+33]
-</status>
+<status status="PASS" start="2024-12-19T15:31:35.676077" elapsed="18.057811"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>Error</pattern>
 <kw name="Fatal Error" owner="BuiltIn">
 <doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:21:30.159285" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-12-19T15:31:53.733888" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-12-02T13:21:30.159285" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-12-19T15:31:53.733888" elapsed="0.000000"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:21:32.160196" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-12-19T15:31:55.734527" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:21:30.159285" elapsed="2.000911"/>
+<status status="PASS" start="2024-12-19T15:31:53.733888" elapsed="2.000639"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:21:32.160196" elapsed="2.266688"/>
+<status status="PASS" start="2024-12-19T15:31:55.734527" elapsed="2.379596"/>
 </kw>
-<status status="PASS" start="2024-12-02T13:21:30.159285" elapsed="4.268249"/>
+<status status="PASS" start="2024-12-19T15:31:53.733888" elapsed="4.380235"/>
 </branch>
-<status status="FAIL" start="2024-12-02T13:21:23.381599" elapsed="11.046935">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="btn btn-default" onclick="javascript:window.location.reload();" data-dismiss="modal"&gt;...&lt;/button&gt; is not clickable at point (1073, 172). Other element would receive the click: &lt;div class="col-md-12"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF614E76CB5+28821]
-	(No symbol) [0x00007FF614DE3840]
-	(No symbol) [0x00007FF614C8578A]
-	(No symbol) [0x00007FF614CE0E8E]
-	(No symbol) [0x00007FF614CDE92C]
-	(No symbol) [0x00007FF614CDBAF6]
-	(No symbol) [0x00007FF614CDAA51]
-	(No symbol) [0x00007FF614CCCBA0]
-	(No symbol) [0x00007FF614CFF2FA]
-	(No symbol) [0x00007FF614CCC3F6]
-	(No symbol) [0x00007FF614CFF510]
-	(No symbol) [0x00007FF614D1F412]
-	(No symbol) [0x00007FF614CFF0A3]
-	(No symbol) [0x00007FF614CCA778]
-	(No symbol) [0x00007FF614CCB8E1]
-	GetHandleVerifier [0x00007FF6151AFCAD+3408013]
-	GetHandleVerifier [0x00007FF6151C741F+3504127]
-	GetHandleVerifier [0x00007FF6151BB5FD+3455453]
-	GetHandleVerifier [0x00007FF614F3BDBB+835995]
-	(No symbol) [0x00007FF614DEEB5F]
-	(No symbol) [0x00007FF614DEA814]
-	(No symbol) [0x00007FF614DEA9AD]
-	(No symbol) [0x00007FF614DDA199]
-	BaseThreadInitThunk [0x00007FF88F4D7374+20]
-	RtlUserThreadStart [0x00007FF88F7BCC91+33]
-</status>
+<status status="PASS" start="2024-12-19T15:31:35.676077" elapsed="22.438046"/>
 </try>
 <tag>EPM_FMD_003</tag>
-<status status="FAIL" start="2024-12-02T13:21:23.380625" elapsed="11.048910">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="btn btn-default" onclick="javascript:window.location.reload();" data-dismiss="modal"&gt;...&lt;/button&gt; is not clickable at point (1073, 172). Other element would receive the click: &lt;div class="col-md-12"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF614E76CB5+28821]
-	(No symbol) [0x00007FF614DE3840]
-	(No symbol) [0x00007FF614C8578A]
-	(No symbol) [0x00007FF614CE0E8E]
-	(No symbol) [0x00007FF614CDE92C]
-	(No symbol) [0x00007FF614CDBAF6]
-	(No symbol) [0x00007FF614CDAA51]
-	(No symbol) [0x00007FF614CCCBA0]
-	(No symbol) [0x00007FF614CFF2FA]
-	(No symbol) [0x00007FF614CCC3F6]
-	(No symbol) [0x00007FF614CFF510]
-	(No symbol) [0x00007FF614D1F412]
-	(No symbol) [0x00007FF614CFF0A3]
-	(No symbol) [0x00007FF614CCA778]
-	(No symbol) [0x00007FF614CCB8E1]
-	GetHandleVerifier [0x00007FF6151AFCAD+3408013]
-	GetHandleVerifier [0x00007FF6151C741F+3504127]
-	GetHandleVerifier [0x00007FF6151BB5FD+3455453]
-	GetHandleVerifier [0x00007FF614F3BDBB+835995]
-	(No symbol) [0x00007FF614DEEB5F]
-	(No symbol) [0x00007FF614DEA814]
-	(No symbol) [0x00007FF614DEA9AD]
-	(No symbol) [0x00007FF614DDA199]
-	BaseThreadInitThunk [0x00007FF88F4D7374+20]
-	RtlUserThreadStart [0x00007FF88F7BCC91+33]
-</status>
+<status status="PASS" start="2024-12-19T15:31:35.675081" elapsed="22.439582"/>
 </test>
-<test id="s1-t4" name="[EPM_FMD_004]" line="58">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:34.444487" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:21:34.444487" elapsed="3.356941"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:21:37.801428" elapsed="0.036715"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:34.443491" elapsed="3.395661"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:37.840792" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:37.840131" elapsed="0.256451"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:38.096582" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:21:38.131502" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:38.096582" elapsed="0.072807"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:21:37.839152" elapsed="0.330237"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:38.170387" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:38.170387" elapsed="0.069815"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:38.170387" elapsed="0.070811"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:38.241198" elapsed="0.253444"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:38.494642" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:38.494642" elapsed="0.191715"/>
-</kw>
-<kw name="Click Profile Menu">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:38.687506" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
-<arg>xpath=//*[@id="profilePage"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:38.687506" elapsed="0.383821"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:38.686357" elapsed="0.384970"/>
-</kw>
-<kw name="Change EPM Incomplete Input_2">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:39.072324" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
-<arg>xpath=/html/body/div/div/section/div/div[1]/div/div/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.072324" elapsed="0.182160"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="changePassword"]/div/div</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.254484" elapsed="0.276224"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:39.530708" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
-<msg time="2024-12-02T13:21:39.590560" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="OldPassword"]</arg>
-<arg>${old_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.530708" elapsed="0.091768"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:39.622476" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
-<msg time="2024-12-02T13:21:39.654389" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="NewPassword"]</arg>
-<arg>${new_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.622476" elapsed="0.082287"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:39.705760" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
-<msg time="2024-12-02T13:21:39.737674" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="ConfirmPassword"]</arg>
-<arg>${confirm_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.705760" elapsed="0.075940"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:39.782697" level="INFO">Clicking button 'xpath=//*[@id="btnChangePassword"]'.</msg>
-<arg>xpath=//*[@id="btnChangePassword"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.782697" elapsed="0.068816"/>
-</kw>
-<arg>${EMPTY}</arg>
-<arg>P@ssw0rd</arg>
-<arg>P@ssw0rd1.</arg>
-<status status="PASS" start="2024-12-02T13:21:39.071327" elapsed="0.780186"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:34.442492" elapsed="5.409021"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:21:39.851513" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:21:39.851513" elapsed="0.000000"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:21:41.851705" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:21:39.851513" elapsed="2.000192"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:21:41.851705" elapsed="2.221897"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:39.851513" elapsed="4.222089"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:21:34.442492" elapsed="9.631110"/>
-</try>
-<tag>EPM_FMD_004</tag>
-<status status="PASS" start="2024-12-02T13:21:34.441496" elapsed="9.632841"/>
-</test>
-<test id="s1-t5" name="[EPM_FMD_005]" line="76">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:44.077358" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:21:44.077358" elapsed="3.302239"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:21:47.379597" elapsed="0.042022"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:44.076328" elapsed="3.346238"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:47.426550" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:47.425554" elapsed="0.302061"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:47.728609" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:21:47.757532" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:47.727615" elapsed="0.068813"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:21:47.423565" elapsed="0.372863"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:47.797514" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:47.797514" elapsed="0.082691"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:47.797514" elapsed="0.082691"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:47.880205" elapsed="0.256732"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:48.137934" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:48.136937" elapsed="0.211096"/>
-</kw>
-<kw name="Click Profile Menu">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:48.349030" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
-<arg>xpath=//*[@id="profilePage"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:48.349030" elapsed="0.367186"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:48.349030" elapsed="0.368184"/>
-</kw>
-<kw name="Change EPM Incomplete Input_2">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:48.717214" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
-<arg>xpath=/html/body/div/div/section/div/div[1]/div/div/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:48.717214" elapsed="0.193557"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="changePassword"]/div/div</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:48.911744" elapsed="0.253406"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:49.165150" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
-<msg time="2024-12-02T13:21:49.217012" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="OldPassword"]</arg>
-<arg>${old_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:49.165150" elapsed="0.122672"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:49.289817" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
-<msg time="2024-12-02T13:21:49.328712" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="NewPassword"]</arg>
-<arg>${new_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:49.289125" elapsed="0.073910"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:49.364033" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
-<msg time="2024-12-02T13:21:49.396944" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="ConfirmPassword"]</arg>
-<arg>${confirm_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:49.363035" elapsed="0.073803"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:49.437837" level="INFO">Clicking button 'xpath=//*[@id="btnChangePassword"]'.</msg>
-<arg>xpath=//*[@id="btnChangePassword"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:49.436838" elapsed="0.069814"/>
-</kw>
-<arg>P@ssw0rd</arg>
-<arg>${EMPTY}</arg>
-<arg>P@ssw0rd1.</arg>
-<status status="PASS" start="2024-12-02T13:21:48.717214" elapsed="0.789438"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:44.076328" elapsed="5.430324"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:21:49.506652" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:21:49.506652" elapsed="0.000000"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:21:51.507220" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:21:49.506652" elapsed="2.000568"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:21:51.507220" elapsed="3.776532"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:49.506652" elapsed="5.777100"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:21:44.076328" elapsed="11.207424"/>
-</try>
-<tag>EPM_FMD_005</tag>
-<status status="PASS" start="2024-12-02T13:21:44.076328" elapsed="11.208067"/>
-</test>
-<test id="s1-t6" name="[EPM_FMD_006]" line="94">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:55.288335" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:21:55.288335" elapsed="3.232470"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:21:58.520805" elapsed="0.079918"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:55.287337" elapsed="3.315036"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:58.605651" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:58.605651" elapsed="0.256311"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:58.861962" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:21:58.889888" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:58.861962" elapsed="0.061836"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:21:58.602662" elapsed="0.321136"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:58.924794" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:58.924794" elapsed="0.077794"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:58.924794" elapsed="0.078791"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:21:59.003585" elapsed="0.256366"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:59.259951" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:59.259951" elapsed="0.167067"/>
-</kw>
-<kw name="Click Profile Menu">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:59.428021" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
-<arg>xpath=//*[@id="profilePage"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:59.427018" elapsed="0.393856"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:59.427018" elapsed="0.393856"/>
-</kw>
-<kw name="Change EPM Incomplete Input_2">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:21:59.821872" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
-<arg>xpath=/html/body/div/div/section/div/div[1]/div/div/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:21:59.821872" elapsed="0.181028"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="changePassword"]/div/div</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:22:00.002900" elapsed="0.287884"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:00.291817" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
-<msg time="2024-12-02T13:22:00.346152" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="OldPassword"]</arg>
-<arg>${old_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:00.290784" elapsed="0.099251"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:00.390035" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
-<msg time="2024-12-02T13:22:00.421949" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="NewPassword"]</arg>
-<arg>${new_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:00.390035" elapsed="0.085770"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:00.475805" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
-<msg time="2024-12-02T13:22:00.514702" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="ConfirmPassword"]</arg>
-<arg>${confirm_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:00.475805" elapsed="0.072394"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:00.548199" level="INFO">Clicking button 'xpath=//*[@id="btnChangePassword"]'.</msg>
-<arg>xpath=//*[@id="btnChangePassword"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:00.548199" elapsed="0.095924"/>
-</kw>
-<arg>P@ssw0rd</arg>
-<arg>P@ssw0rd1.</arg>
-<arg>${EMPTY}</arg>
-<status status="PASS" start="2024-12-02T13:21:59.820874" elapsed="0.823249"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:21:55.287337" elapsed="5.356786"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:22:00.644123" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:22:00.644123" elapsed="0.000000"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:22:02.646126" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:22:00.644123" elapsed="2.002003"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:22:02.646126" elapsed="2.257150"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:00.644123" elapsed="4.259153"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:21:55.287337" elapsed="9.615939"/>
-</try>
-<tag>EPM_FMD_006</tag>
-<status status="PASS" start="2024-12-02T13:21:55.286341" elapsed="9.617807"/>
-</test>
-<test id="s1-t7" name="[EPM_FMD_007]" line="112">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:04.906219" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:22:04.905146" elapsed="3.200074"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:22:08.105220" elapsed="0.048869"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:04.905146" elapsed="3.248943"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:08.156084" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:08.156084" elapsed="0.202278"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:08.360551" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:22:08.455104" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:08.359372" elapsed="0.131658"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:22:08.154445" elapsed="0.336585"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:08.492006" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:08.492006" elapsed="0.086083"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:08.491030" elapsed="0.088105"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:22:08.579135" elapsed="0.250282"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:08.829417" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:08.829417" elapsed="0.177801"/>
-</kw>
-<kw name="Click Profile Menu">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:09.008217" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
-<arg>xpath=//*[@id="profilePage"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:09.007218" elapsed="0.444520"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:09.007218" elapsed="0.444520"/>
-</kw>
-<kw name="Change EPM Incomplete Input_2">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:09.453508" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
-<arg>xpath=/html/body/div/div/section/div/div[1]/div/div/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:09.452728" elapsed="0.217514"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="changePassword"]/div/div</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:22:09.670242" elapsed="0.258212"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:09.928454" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
-<msg time="2024-12-02T13:22:09.993284" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="OldPassword"]</arg>
-<arg>${old_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:09.928454" elapsed="0.113697"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:10.042151" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
-<msg time="2024-12-02T13:22:10.084154" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="NewPassword"]</arg>
-<arg>${new_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:10.042151" elapsed="0.086063"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:10.128214" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
-<msg time="2024-12-02T13:22:10.161127" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="ConfirmPassword"]</arg>
-<arg>${confirm_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:10.128214" elapsed="0.063830"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:10.192044" level="INFO">Clicking button 'xpath=//*[@id="btnChangePassword"]'.</msg>
-<arg>xpath=//*[@id="btnChangePassword"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:10.192044" elapsed="0.116689"/>
-</kw>
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<status status="PASS" start="2024-12-02T13:22:09.451738" elapsed="0.856995"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:04.905146" elapsed="5.403587"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:22:10.309730" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:22:10.308733" elapsed="0.000997"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:22:12.309914" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:22:10.309730" elapsed="2.000184"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:22:12.309914" elapsed="2.246816"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:10.309730" elapsed="4.247000"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:22:04.905146" elapsed="9.651584"/>
-</try>
-<tag>EPM_FMD_007</tag>
-<status status="PASS" start="2024-12-02T13:22:04.904148" elapsed="9.653388"/>
-</test>
-<test id="s1-t8" name="[EPM_FMD_008]" line="130">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:14.559554" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:22:14.559554" elapsed="3.264152"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:22:17.823706" elapsed="0.038897"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:14.558527" elapsed="3.304076"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:17.865600" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:17.863598" elapsed="0.309954"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:18.174550" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:22:18.202495" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:18.174550" elapsed="0.062929"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:22:17.862603" elapsed="0.374876"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:18.238398" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:18.238398" elapsed="0.069808"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:18.238398" elapsed="0.069808"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:22:18.309204" elapsed="0.253426"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:18.563628" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:18.562630" elapsed="0.178766"/>
-</kw>
-<kw name="Click Profile Menu">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:18.742340" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
-<arg>xpath=//*[@id="profilePage"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:18.742340" elapsed="0.410038"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:18.741396" elapsed="0.411980"/>
-</kw>
-<kw name="Change Password EPM Invalid Formats">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:19.153376" level="INFO">Clicking button 'xpath=/html/body/div/div/section/div/div[1]/div/div/div/button'.</msg>
-<arg>xpath=/html/body/div/div/section/div/div[1]/div/div/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.153376" elapsed="0.185646"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="changePassword"]/div/div</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.339022" elapsed="0.254005"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:19.594026" level="INFO">Typing password into text field 'xpath=//*[@id="OldPassword"]'.</msg>
-<msg time="2024-12-02T13:22:19.652869" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="OldPassword"]</arg>
-<arg>${old_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.593027" elapsed="0.115691"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:19.709715" level="INFO">Typing password into text field 'xpath=//*[@id="NewPassword"]'.</msg>
-<msg time="2024-12-02T13:22:19.743335" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="NewPassword"]</arg>
-<arg>${new_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.708718" elapsed="0.085461"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:19.795000" level="INFO">Typing password into text field 'xpath=//*[@id="ConfirmPassword"]'.</msg>
-<msg time="2024-12-02T13:22:19.835238" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//*[@id="ConfirmPassword"]</arg>
-<arg>${confirm_password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.795000" elapsed="0.081165"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:19.877126" level="INFO">Clicking button 'xpath=//*[@id="btnChangePassword"]'.</msg>
-<arg>xpath=//*[@id="btnChangePassword"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.877126" elapsed="0.114884"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:22:21.992410" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:22:19.992010" elapsed="2.000400"/>
-</kw>
-<arg>P@ssw0rd</arg>
-<arg>Pass1,</arg>
-<arg>Pass1,</arg>
-<status status="PASS" start="2024-12-02T13:22:19.153376" elapsed="2.839034"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:14.558527" elapsed="7.433883"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:22:21.993457" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:22:21.992410" elapsed="0.001047"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:22:23.994770" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:22:21.994532" elapsed="2.000238"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:22:23.995771" elapsed="2.258642"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:21.994238" elapsed="4.260175"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:22:14.558527" elapsed="11.696625"/>
-</try>
-<tag>EPM_FMD_008</tag>
-<status status="PASS" start="2024-12-02T13:22:14.558527" elapsed="11.697255"/>
-</test>
-<test id="s1-t9" name="[EPM_FMD_009]" line="148">
-<try>
-<branch type="TRY">
-<kw name="Open WebApp using Chrome" owner="EPM_Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:26.260148" level="INFO">Opening browser 'Chrome' to base url 'https://172.31.32.64/registration_pilot/'.</msg>
-<arg>${baseURL}</arg>
-<arg>${browserName}</arg>
-<arg>options=add_argument("--ignore-certificate-errors")</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-02T13:22:26.259153" elapsed="3.054098"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-02T13:22:29.313251" elapsed="0.038164"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:26.259153" elapsed="3.092262"/>
-</kw>
-<kw name="InputValue" owner="EPM_Resource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:29.352412" level="INFO">Typing text '8481' into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[1]/div/input[2]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:29.352412" elapsed="0.250357"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:29.602769" level="INFO">Typing password into text field 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input'.</msg>
-<msg time="2024-12-02T13:22:29.631711" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[2]/input</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:29.602769" elapsed="0.065824"/>
-</kw>
-<arg>username=${fmd_un}</arg>
-<arg>password=${personnelPW}</arg>
-<status status="PASS" start="2024-12-02T13:22:29.352412" elapsed="0.316181"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:29.669590" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button'.</msg>
-<arg>xpath=/html/body/div[2]/div/div/section/div/div[2]/form/div[4]/div/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:29.669590" elapsed="0.079970"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:29.669590" elapsed="0.079970"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[@id="modalDynamicMessage"]</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-02T13:22:29.749560" elapsed="0.254167"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:30.004330" level="INFO">Clicking button 'xpath=//*[@id="modalDynamicButton"]'.</msg>
-<arg>xpath=//*[@id="modalDynamicButton"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:30.004330" elapsed="0.169941"/>
-</kw>
-<kw name="Click Profile Menu">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-02T13:22:30.175268" level="INFO">Clicking element 'xpath=//*[@id="profilePage"]'.</msg>
-<arg>xpath=//*[@id="profilePage"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-02T13:22:30.175268" elapsed="0.375094"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:30.175268" elapsed="0.375094"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:26.258151" elapsed="4.292211"/>
-</branch>
-<branch type="EXCEPT">
-<pattern>Error</pattern>
-<kw name="Fatal Error" owner="BuiltIn">
-<doc>Stops the whole test execution.</doc>
-<status status="NOT RUN" start="2024-12-02T13:22:30.550833" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-12-02T13:22:30.550833" elapsed="0.000000"/>
-</branch>
-<branch type="FINALLY">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-02T13:22:32.551059" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-02T13:22:30.550833" elapsed="2.000226"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-02T13:22:32.551619" elapsed="2.214087"/>
-</kw>
-<status status="PASS" start="2024-12-02T13:22:30.550833" elapsed="4.214873"/>
-</branch>
-<status status="PASS" start="2024-12-02T13:22:26.258151" elapsed="8.507555"/>
-</try>
-<tag>EPM_FMD_009</tag>
-<status status="PASS" start="2024-12-02T13:22:26.257208" elapsed="8.509492"/>
-</test>
-<status status="FAIL" start="2024-12-02T13:21:06.752817" elapsed="88.015877"/>
+<status status="PASS" start="2024-12-19T15:31:35.269406" elapsed="22.847253"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">EPM_FMD_001</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_002</stat>
-<stat pass="0" fail="1" skip="0">EPM_FMD_003</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_004</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_005</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_006</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_007</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_008</stat>
-<stat pass="1" fail="0" skip="0">EPM_FMD_009</stat>
+<stat pass="1" fail="0" skip="0">EPM_FMD_003</stat>
 </tag>
 <suite>
-<stat pass="8" fail="1" skip="0" id="s1" name="EPM FMD">EPM FMD</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="EPM FMD">EPM FMD</stat>
 </suite>
 </statistics>
 <errors>

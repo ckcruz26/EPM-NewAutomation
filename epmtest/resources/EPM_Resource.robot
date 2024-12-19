@@ -2,7 +2,7 @@
 Library        SeleniumLibrary
 
 *** Variables ***
-${baseURL}            https://172.31.32.64/registration_pilot/
+${baseURL}            https://172.31.32.64/registration_staging/
 ${browserName}        Chrome
 
 #Account Levels
@@ -19,6 +19,8 @@ ${personnelPW}        P@ssw0rd
 ${UploadFiletest}     css=[type='file']
 ${AddFile}            C:/Users/ckcruz/Downloads/03-12456.png
 
+#General Array
+@{messages}     Would you like to confirm and save the changes now?    Your password has been successfully updated. Would you like to stay logged in or log out and sign in again with your new password?
 
 *** Keywords ***
 #General Reuse
