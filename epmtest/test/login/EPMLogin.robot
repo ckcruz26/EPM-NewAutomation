@@ -25,7 +25,7 @@ Resource    ../../resources/EPM_Resource.robot
         Sleep     2
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]
         ${error_msg}     Get Text   xpath=//*[@id="modalDynamicMessage"]
-        Should Be Equal  ${error_msg}    Oops! Invalid Credentials. Please contact Personnel Section for further assistance in verifying your information.
+        Should Be Equal  ${error_msg}    Oops! Invalid Credentials. Please contact HRPPMS-RSP for further assistance in verifying your information.
     EXCEPT    Error
         Fatal Error
     FINALLY
@@ -41,7 +41,7 @@ Resource    ../../resources/EPM_Resource.robot
         Sleep      2
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]
         ${error_msg}     Get Text   xpath=//*[@id="modalDynamicMessage"]
-        Should Be Equal  ${error_msg}    Oops! Invalid Credentials. Please contact Personnel Section.
+        Should Be Equal  ${error_msg}    Oops! Invalid Credentials. Please contact HRPPMS-RSP.
     EXCEPT    Error
         Fatal Error
     FINALLY
@@ -122,7 +122,7 @@ Resource    ../../resources/EPM_Resource.robot
         ${error_msg}     Get Text   xpath=//*[@id="modalDynamicMessage"]
 
         IF  ${i} != 2
-            Should Be Equal    ${error_msg}    Oops! Invalid Credentials. Please contact Personnel Section for further assistance in verifying your information.
+            Should Be Equal    ${error_msg}    Oops! Invalid Credentials. Please contact HRPPMS-RSP for further assistance in verifying your information.
         END
 
         Click Button    xpath=//*[@id="modalDynamicButton"]
@@ -144,7 +144,7 @@ Resource    ../../resources/EPM_Resource.robot
         Click Login Button
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]
         ${error_msg}     Get Text   xpath=//*[@id="modalDynamicMessage"]
-        Should Be Equal    ${error_msg}    Your account is pending approval. Please contact the Personnel Section.
+        Should Be Equal    ${error_msg}    Your account is pending approval. Please contact the HRPPMS-RSP.
         Sleep    2
     EXCEPT    Error
         Fatal Error
@@ -160,7 +160,7 @@ Resource    ../../resources/EPM_Resource.robot
         Click Login Button
         Wait Until Element Is Visible    xpath=//*[@id="modalDynamicMessage"]
         ${error_msg}     Get Text   xpath=//*[@id="modalDynamicMessage"]
-        Should Be Equal    ${error_msg}    Your registration has been disapproved by the administrator. Please contact the Personnel Section.
+        Should Be Equal    ${error_msg}    Your registration has been disapproved by the administrator. Please contact the HRPPMS-RSP.
         Sleep    2
     EXCEPT    Error
         Fatal Error
